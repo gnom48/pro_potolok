@@ -578,7 +578,6 @@
 
         .carousel {
             width: 100%; /* Задаем карусели ширину в 100% */
-            max-width: 1200px; /* Ограничиваем максимальную ширину карусели */
             margin: auto;
             overflow: hidden;
             position: relative;
