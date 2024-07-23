@@ -562,5 +562,12 @@
         animation: typing 5s steps(40, end) forwards; /* Добавляем forwards для сохранения конечного состояния */
     }
 
+    .hoveringProPotolokCeiling .image {
+        width: 200px;
+        opacity: 0;
+        transform: translateX(150%);
+        transition: transform 1s, opacity 0.5s 0.25s;
+    }
+
 
 }
