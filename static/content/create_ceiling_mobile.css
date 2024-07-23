@@ -5,6 +5,9 @@
         overflow-x: hidden;
     }
 
+    .create-ceiling {
+        background-color: #23242B;
+    }
 
     .main-header {
         background-color: #fff;
@@ -45,14 +48,14 @@
     .textSection {
         max-width: 100%;
         margin-right: 0;
-        margin-bottom: 20px; /* Îòñòóï ñíèçó äëÿ òåêñòà */
+        margin-bottom: 20px; /* Отступ снизу для текста */
     }
 
     .startSection img {
         border-radius: 20px;
-        margin-left: 5px; /* Îòñòóï ñëåâà äëÿ èçîáðàæåíèÿ */
+        margin-left: 5px; /* Отступ слева для изображения */
         max-width: 100%;
-        height: auto; /* Àâòîìàòè÷åñêàÿ âûñîòà èçîáðàæåíèÿ */
+        height: auto; /* Автоматическая высота изображения */
     }
 
     .imageSection img {
@@ -80,47 +83,47 @@
         color: white;
         text-decoration: none;
         font-size: 16px;
-        border-radius: 35px; /* Èñïðàâëÿåì çíà÷åíèå ðàäèóñà */
+        border-radius: 35px; /* Исправляем значение радиуса */
     }
 
     .ProPotolComand {
         display: grid;
         justify-items: stretch;
         grid-template-columns: 1fr;
-        flex-direction: column; /* Ðàçìåùàåì ýëåìåíòû â ñòîëáåö */
-        align-items: center; /* Öåíòðèðóåì ýëåìåíòû ïî ãîðèçîíòàëè */
+        flex-direction: column; /* Размещаем элементы в столбец */
+        align-items: center; /* Центрируем элементы по горизонтали */
         margin-top: 20px;
         background-color: white;
-        text-align: center; /* Öåíòðèðóåì òåêñò âíóòðè áëîêà */
-        width: 100%; /* Óñòàíàâëèâàåì øèðèíó íà 100% */
+        text-align: center; /* Центрируем текст внутри блока */
+        width: 100%; /* Устанавливаем ширину на 100% */
     }
 
     .ProPotolComand img {
-        margin-bottom: 20px; /* Îòñòóï ñíèçó äëÿ èçîáðàæåíèÿ */
-        max-width: 90%; /* Îãðàíè÷åíèå øèðèíû èçîáðàæåíèÿ */
-        display: block; /* Óñòàíàâëèâàåì display: block äëÿ img */
-        margin-left: auto; /* Öåíòðèðóåì ïî ãîðèçîíòàëè */
-        margin-right: auto; /* Öåíòðèðóåì ïî ãîðèçîíòàëè */
+        margin-bottom: 20px; /* Отступ снизу для изображения */
+        max-width: 90%; /* Ограничение ширины изображения */
+        display: block; /* Устанавливаем display: block для img */
+        margin-left: auto; /* Центрируем по горизонтали */
+        margin-right: auto; /* Центрируем по горизонтали */
     }
 
     .ProPotolComand .textContent1 {
-        width: 100%; /* Óñòàíàâëèâàåì øèðèíó íà 100% */
-        text-align: center; /* Öåíòðèðóåì òåêñò âíóòðè áëîêà */
+        width: 100%; /* Устанавливаем ширину на 100% */
+        text-align: center; /* Центрируем текст внутри блока */
         min-width: 100% !important;
     }
 
     .ProPotolComand h2 {
         font-size: 24px;
         margin: 0 0 10px 0;
-        width: 100%; /* Óñòàíàâëèâàåì øèðèíó íà 100% */
-        text-align: center; /* Öåíòðèðóåì òåêñò âíóòðè çàãîëîâêà */
+        width: 100%; /* Устанавливаем ширину на 100% */
+        text-align: center; /* Центрируем текст внутри заголовка */
     }
 
     .ProPotolComand p {
         font-size: 16px;
         margin: 0;
-        width: 100%; /* Óñòàíàâëèâàåì øèðèíó íà 100% */
-        text-align: center; /* Öåíòðèðóåì òåêñò âíóòðè àáçàöà */
+        width: 100%; /* Устанавливаем ширину на 100% */
+        text-align: center; /* Центрируем текст внутри абзаца */
     }
 
 
@@ -190,6 +193,7 @@
         border-radius: 10px;
         justify-self: center;
         height: 100px !important;
+        margin-top: 15px;
     }
 
     #leftPanel p {
@@ -214,10 +218,10 @@
         grid-template-columns: 50px auto 50px;
         grid-template-rows: 10px auto 10px;
         margin-top: 20px;
-        max-width: 100%; /* Ìàêñèìàëüíàÿ øèðèíà êîíòåéíåðà íå áîëüøå 100% */
-        width: 100%; /* Øèðèíà êîíòåéíåðà */
-        justify-content: center; /* Öåíòðîâêà êîíòåéíåðà */
-        box-sizing: border-box; /* Âêëþ÷åíèå ãðàíèö è îòñòóïîâ â ðàçìåðû */
+        max-width: 100%; /* Максимальная ширина контейнера не больше 100% */
+        width: 100%; /* Ширина контейнера */
+        justify-content: center; /* Центровка контейнера */
+        box-sizing: border-box; /* Включение границ и отступов в размеры */
     }
 
     #rightPanel {
@@ -226,7 +230,7 @@
         min-width: 300px;
         min-height: 100px;
         box-sizing: border-box;
-        max-width: 100% !important; /* Ìàêñèìàëüíàÿ øèðèíà êîíòåéíåðà íå áîëüøå 100% */
+        max-width: 100% !important; /* Максимальная ширина контейнера не больше 100% */
         width: 100% !important;
     }
 
@@ -332,21 +336,21 @@
 
 
     .features div {
-        display: flex; /* Èñïîëüçóåì Flexbox äëÿ äåòåé */
-        flex-direction: column; /* Êîëîíêà, ÷òîáû èçîáðàæåíèå áûëî ñâåðõó, à òåêñò ñíèçó */
-        align-items: center; /* Öåíòðèðîâàíèå ïî ãîðèçîíòàëè */
-        justify-content: center; /* Öåíòðèðîâàíèå ïî âåðòèêàëè */
+        display: flex; /* Используем Flexbox для детей */
+        flex-direction: column; /* Колонка, чтобы изображение было сверху, а текст снизу */
+        align-items: center; /* Центрирование по горизонтали */
+        justify-content: center; /* Центрирование по вертикали */
         width: 30%;
         text-align: center;
         box-sizing: border-box;
-        padding: 20px; /* Îïöèîíàëüíî, äëÿ âíóòðåííåãî îòñòóïà */
+        padding: 20px; /* Опционально, для внутреннего отступа */
     }
 
     .features img {
-        width: 90%; /* Øèðèíà èçîáðàæåíèÿ íà 100% êîíòåéíåðà */
+        width: 90%; /* Ширина изображения на 100% контейнера */
         max-width: 100%;
-        height: auto; /* Àâòîìàòè÷åñêîå èçìåíåíèå âûñîòû */
-        margin-bottom: 10px; /* Îòñòóï ñíèçó äëÿ èçîáðàæåíèÿ */
+        height: auto; /* Автоматическое изменение высоты */
+        margin-bottom: 10px; /* Отступ снизу для изображения */
     }
 
     .card {
@@ -366,8 +370,8 @@
     }
 
     .textContent {
-        flex: 1; /* Çàíèìàåì äîñòóïíîå ïðîñòðàíñòâî âíóòðè flex-êîíòåéíåðà */
-        text-align: left; /* Âûðàâíèâàåì òåêñò âíóòðè .textContent ïî ëåâîìó êðàþ */
+        flex: 1; /* Занимаем доступное пространство внутри flex-контейнера */
+        text-align: left; /* Выравниваем текст внутри .textContent по левому краю */
         margin-top: 0;
         margin-bottom: 0;
         top: 0;
@@ -381,13 +385,13 @@
 
     .contact-map {
         width: 100%;
-        margin-bottom: 20px; /* Äîáàâëÿåì îòñòóï ñíèçó */
+        margin-bottom: 20px; /* Добавляем отступ снизу */
     }
 
     .contact-text {
         max-width: 100%;
         margin: 0;
-        text-align: center; /* Öåíòðèðóåì òåêñò */
+        text-align: center; /* Центрируем текст */
     }
 
     .contact-text h1 {
@@ -430,7 +434,6 @@
     }
 
     .testimonial {
-        background: #f9f9f9;
         border-radius: 10px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         padding: 20px;
@@ -441,14 +444,12 @@
 
         .testimonial p {
             font-size: 16px;
-            color: #555;
             line-height: 1.5;
         }
 
         .testimonial h3 {
             margin-top: 10px;
             font-size: 18px;
-            color: #333;
         }
 
     .carousel-buttons {
@@ -477,7 +478,7 @@
         color: white;
         text-decoration: none;
         font-size: 18px;
-        border-radius: 25px; /* Èñïðàâëÿåì çíà÷åíèå ðàäèóñà */
+        border-radius: 25px; /* Исправляем значение радиуса */
         margin-bottom: 10px;
         z-index: 10;
     }
@@ -487,38 +488,37 @@
     }
 
     .callus {
-        background-color: #E2E2E2;
         display: flex;
         flex-direction: column;
-        align-items: center; /* Öåíòðèðîâàíèå ïî ãîðèçîíòàëè */
-        text-align: center; /* Öåíòðèðîâàíèå òåêñòà */
+        align-items: center; /* Центрирование по горизонтали */
+        text-align: center; /* Центрирование текста */
         padding: 20px;
-        position: relative; /* Ïîçèöèîíèðîâàíèå îòíîñèòåëüíî ðîäèòåëüñêîãî ýëåìåíòà */
+        position: relative; /* Позиционирование относительно родительского элемента */
     }
 
     .callus img {
-        position: absolute; /* Àáñîëþòíîå ïîçèöèîíèðîâàíèå */
-        top: 50%; /* Öåíòðèðîâàíèå ïî âåðòèêàëè îòíîñèòåëüíî ðîäèòåëÿ */
-        transform: translateY(-50%); /* Öåíòðèðîâàíèå ïî âåðòèêàëè */
-        width: 30%; /* Çàäàåì øèðèíó èçîáðàæåíèé */
-        max-width: 200px; /* Ìàêñèìàëüíàÿ øèðèíà èçîáðàæåíèé */
-        height: auto; /* Àâòîìàòè÷åñêîå èçìåíåíèå âûñîòû äëÿ ñîõðàíåíèÿ ïðîïîðöèé */
+        position: absolute; /* Абсолютное позиционирование */
+        top: 50%; /* Центрирование по вертикали относительно родителя */
+        transform: translateY(-50%); /* Центрирование по вертикали */
+        width: 30%; /* Задаем ширину изображений */
+        max-width: 200px; /* Максимальная ширина изображений */
+        height: auto; /* Автоматическое изменение высоты для сохранения пропорций */
     }
 
     .callus img:first-of-type {
-        left: 2%; /* Ïîçèöèîíèðîâàíèå ïåðâîé êàðòèíêè ñëåâà */
+        left: 2%; /* Позиционирование первой картинки слева */
     }
 
     .callus img:last-of-type {
-        right: 2%; /* Ïîçèöèîíèðîâàíèå âòîðîé êàðòèíêè ñïðàâà */
+        right: 2%; /* Позиционирование второй картинки справа */
     }
 
     .callus h2 {
         font-size: 24px;
         color: #333;
-        margin: 10px 0 0 0; /* Îòñòóïû ñâåðõó è ñíèçó */
-        position: relative; /* Îòíîñèòåëüíîå ïîçèöèîíèðîâàíèå äëÿ ïåðåêðûòèÿ */
-        z-index: 1; /* Ïîäíÿòèå òåêñòà íàä èçîáðàæåíèÿìè */
+        margin: 10px 0 0 0; /* Отступы сверху и снизу */
+        position: relative; /* Относительное позиционирование для перекрытия */
+        z-index: 1; /* Поднятие текста над изображениями */
     }
 
     footer img {
@@ -562,5 +562,6 @@
         margin-left: 9%;
         animation: typing 5s steps(40, end) forwards; /* Добавляем forwards для сохранения конечного состояния */
     }
+
 
 }
