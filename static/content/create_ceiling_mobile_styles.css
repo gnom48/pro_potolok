@@ -77,10 +77,10 @@
         display: grid;
         grid-template-columns: 50px auto 50px;
         grid-template-rows: 10px auto 10px;
-        max-width: 100%; /* Максимальная ширина контейнера не больше 100% */
-        width: 100%; /* Ширина контейнера */
-        justify-content: center; /* Центровка контейнера */
-        box-sizing: border-box; /* Включение границ и отступов в размеры */
+        max-width: 100%; /* ГЊГ ГЄГ±ГЁГ¬Г Г«ГјГ­Г Гї ГёГЁГ°ГЁГ­Г  ГЄГ®Г­ГІГҐГ©Г­ГҐГ°Г  Г­ГҐ ГЎГ®Г«ГјГёГҐ 100% */
+        width: 100%; /* ГГЁГ°ГЁГ­Г  ГЄГ®Г­ГІГҐГ©Г­ГҐГ°Г  */
+        justify-content: center; /* Г–ГҐГ­ГІГ°Г®ГўГЄГ  ГЄГ®Г­ГІГҐГ©Г­ГҐГ°Г  */
+        box-sizing: border-box; /* Г‚ГЄГ«ГѕГ·ГҐГ­ГЁГҐ ГЈГ°Г Г­ГЁГ¶ ГЁ Г®ГІГ±ГІГіГЇГ®Гў Гў Г°Г Г§Г¬ГҐГ°Г» */
     }
 
     #rightPanel {
@@ -91,7 +91,7 @@
         height: 200px !important;
         width: 400px !important;
         box-sizing: border-box;
-        max-width: 100% !important; /* Максимальная ширина контейнера не больше 100% */
+        max-width: 100% !important; /* ГЊГ ГЄГ±ГЁГ¬Г Г«ГјГ­Г Гї ГёГЁГ°ГЁГ­Г  ГЄГ®Г­ГІГҐГ©Г­ГҐГ°Г  Г­ГҐ ГЎГ®Г«ГјГёГҐ 100% */
         width: 100% !important;
     }
 
@@ -185,25 +185,24 @@
    
 
     .card {
-        display: flex !important; /* Используем flexbox для размещения элементов */
-        flex-direction: row; /* Для мобильных устройств размещаем элементы по колонке */
+        display: flex !important; /* Г€Г±ГЇГ®Г«ГјГ§ГіГҐГ¬ flexbox Г¤Г«Гї Г°Г Г§Г¬ГҐГ№ГҐГ­ГЁГї ГЅГ«ГҐГ¬ГҐГ­ГІГ®Гў */
+        flex-direction: row; /* Г„Г«Гї Г¬Г®ГЎГЁГ«ГјГ­Г»Гµ ГіГ±ГІГ°Г®Г©Г±ГІГў Г°Г Г§Г¬ГҐГ№Г ГҐГ¬ ГЅГ«ГҐГ¬ГҐГ­ГІГ» ГЇГ® ГЄГ®Г«Г®Г­ГЄГҐ */
         background-color: white;
-        border: none; /* Убираем стандартную границу */
-        padding: 0 !important; /* Убираем padding */
+        border: none; /* Г“ГЎГЁГ°Г ГҐГ¬ Г±ГІГ Г­Г¤Г Г°ГІГ­ГіГѕ ГЈГ°Г Г­ГЁГ¶Гі */
+        padding: 0 !important; /* Г“ГЎГЁГ°Г ГҐГ¬ padding */
         margin-bottom: 20px !important;
-        width: 90% !important; /* Уменьшаем ширину для мобильных устройств */
+        width: 90% !important; /* Г“Г¬ГҐГ­ГјГёГ ГҐГ¬ ГёГЁГ°ГЁГ­Гі Г¤Г«Гї Г¬Г®ГЎГЁГ«ГјГ­Г»Гµ ГіГ±ГІГ°Г®Г©Г±ГІГў */
         max-width: 90% !important;
         margin: 20px auto !important;
-        align-items: center; /* Выравниваем элементы по вертикали внутри flex-контейнера */
-        box-shadow: 0 0 0 2px #000; /* Добавляем черную тень для имитации границы */
-        border-radius: 98px; /* Скругляем углы до 35px */
-        overflow: hidden; /* Прячем всё, что выходит за пределы карточки */
+        align-items: center; /* Г‚Г»Г°Г ГўГ­ГЁГўГ ГҐГ¬ ГЅГ«ГҐГ¬ГҐГ­ГІГ» ГЇГ® ГўГҐГ°ГІГЁГЄГ Г«ГЁ ГўГ­ГіГІГ°ГЁ flex-ГЄГ®Г­ГІГҐГ©Г­ГҐГ°Г  */
+        box-shadow: 0 0 0 2px #000; /* Г„Г®ГЎГ ГўГ«ГїГҐГ¬ Г·ГҐГ°Г­ГіГѕ ГІГҐГ­Гј Г¤Г«Гї ГЁГ¬ГЁГІГ Г¶ГЁГЁ ГЈГ°Г Г­ГЁГ¶Г» */
+        border-radius: 98px; /* Г‘ГЄГ°ГіГЈГ«ГїГҐГ¬ ГіГЈГ«Г» Г¤Г® 35px */
+        overflow: hidden; /* ГЏГ°ГїГ·ГҐГ¬ ГўГ±Вё, Г·ГІГ® ГўГ»ГµГ®Г¤ГЁГІ Г§Г  ГЇГ°ГҐГ¤ГҐГ«Г» ГЄГ Г°ГІГ®Г·ГЄГЁ */
     }
 
     .avatar-div {
         width: 200px;
         height: 200px;
-        background-image: url('https://media.giphy.com/media/l2Sqgo31Jf0D0hRJK/giphy.gif');
         background-size: cover;
         background-position: center;
     }
