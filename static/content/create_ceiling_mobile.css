@@ -45,14 +45,14 @@
     .textSection {
         max-width: 100%;
         margin-right: 0;
-        margin-bottom: 20px; /* Отступ снизу для текста */
+        margin-bottom: 20px; /* ГЋГІГ±ГІГіГЇ Г±Г­ГЁГ§Гі Г¤Г«Гї ГІГҐГЄГ±ГІГ  */
     }
 
     .startSection img {
         border-radius: 20px;
-        margin-left: 5px; /* Отступ слева для изображения */
+        margin-left: 5px; /* ГЋГІГ±ГІГіГЇ Г±Г«ГҐГўГ  Г¤Г«Гї ГЁГ§Г®ГЎГ°Г Г¦ГҐГ­ГЁГї */
         max-width: 100%;
-        height: auto; /* Автоматическая высота изображения */
+        height: auto; /* ГЂГўГІГ®Г¬Г ГІГЁГ·ГҐГ±ГЄГ Гї ГўГ»Г±Г®ГІГ  ГЁГ§Г®ГЎГ°Г Г¦ГҐГ­ГЁГї */
     }
 
     .imageSection img {
@@ -80,47 +80,47 @@
         color: white;
         text-decoration: none;
         font-size: 16px;
-        border-radius: 35px; /* Исправляем значение радиуса */
+        border-radius: 35px; /* Г€Г±ГЇГ°Г ГўГ«ГїГҐГ¬ Г§Г­Г Г·ГҐГ­ГЁГҐ Г°Г Г¤ГЁГіГ±Г  */
     }
 
     .ProPotolComand {
         display: grid;
         justify-items: stretch;
         grid-template-columns: 1fr;
-        flex-direction: column; /* Размещаем элементы в столбец */
-        align-items: center; /* Центрируем элементы по горизонтали */
+        flex-direction: column; /* ГђГ Г§Г¬ГҐГ№Г ГҐГ¬ ГЅГ«ГҐГ¬ГҐГ­ГІГ» Гў Г±ГІГ®Г«ГЎГҐГ¶ */
+        align-items: center; /* Г–ГҐГ­ГІГ°ГЁГ°ГіГҐГ¬ ГЅГ«ГҐГ¬ГҐГ­ГІГ» ГЇГ® ГЈГ®Г°ГЁГ§Г®Г­ГІГ Г«ГЁ */
         margin-top: 20px;
         background-color: white;
-        text-align: center; /* Центрируем текст внутри блока */
-        width: 100%; /* Устанавливаем ширину на 100% */
+        text-align: center; /* Г–ГҐГ­ГІГ°ГЁГ°ГіГҐГ¬ ГІГҐГЄГ±ГІ ГўГ­ГіГІГ°ГЁ ГЎГ«Г®ГЄГ  */
+        width: 100%; /* Г“Г±ГІГ Г­Г ГўГ«ГЁГўГ ГҐГ¬ ГёГЁГ°ГЁГ­Гі Г­Г  100% */
     }
 
     .ProPotolComand img {
-        margin-bottom: 20px; /* Отступ снизу для изображения */
-        max-width: 90%; /* Ограничение ширины изображения */
-        display: block; /* Устанавливаем display: block для img */
-        margin-left: auto; /* Центрируем по горизонтали */
-        margin-right: auto; /* Центрируем по горизонтали */
+        margin-bottom: 20px; /* ГЋГІГ±ГІГіГЇ Г±Г­ГЁГ§Гі Г¤Г«Гї ГЁГ§Г®ГЎГ°Г Г¦ГҐГ­ГЁГї */
+        max-width: 90%; /* ГЋГЈГ°Г Г­ГЁГ·ГҐГ­ГЁГҐ ГёГЁГ°ГЁГ­Г» ГЁГ§Г®ГЎГ°Г Г¦ГҐГ­ГЁГї */
+        display: block; /* Г“Г±ГІГ Г­Г ГўГ«ГЁГўГ ГҐГ¬ display: block Г¤Г«Гї img */
+        margin-left: auto; /* Г–ГҐГ­ГІГ°ГЁГ°ГіГҐГ¬ ГЇГ® ГЈГ®Г°ГЁГ§Г®Г­ГІГ Г«ГЁ */
+        margin-right: auto; /* Г–ГҐГ­ГІГ°ГЁГ°ГіГҐГ¬ ГЇГ® ГЈГ®Г°ГЁГ§Г®Г­ГІГ Г«ГЁ */
     }
 
     .ProPotolComand .textContent1 {
-        width: 100%; /* Устанавливаем ширину на 100% */
-        text-align: center; /* Центрируем текст внутри блока */
+        width: 100%; /* Г“Г±ГІГ Г­Г ГўГ«ГЁГўГ ГҐГ¬ ГёГЁГ°ГЁГ­Гі Г­Г  100% */
+        text-align: center; /* Г–ГҐГ­ГІГ°ГЁГ°ГіГҐГ¬ ГІГҐГЄГ±ГІ ГўГ­ГіГІГ°ГЁ ГЎГ«Г®ГЄГ  */
         min-width: 100% !important;
     }
 
     .ProPotolComand h2 {
         font-size: 24px;
         margin: 0 0 10px 0;
-        width: 100%; /* Устанавливаем ширину на 100% */
-        text-align: center; /* Центрируем текст внутри заголовка */
+        width: 100%; /* Г“Г±ГІГ Г­Г ГўГ«ГЁГўГ ГҐГ¬ ГёГЁГ°ГЁГ­Гі Г­Г  100% */
+        text-align: center; /* Г–ГҐГ­ГІГ°ГЁГ°ГіГҐГ¬ ГІГҐГЄГ±ГІ ГўГ­ГіГІГ°ГЁ Г§Г ГЈГ®Г«Г®ГўГЄГ  */
     }
 
     .ProPotolComand p {
         font-size: 16px;
         margin: 0;
-        width: 100%; /* Устанавливаем ширину на 100% */
-        text-align: center; /* Центрируем текст внутри абзаца */
+        width: 100%; /* Г“Г±ГІГ Г­Г ГўГ«ГЁГўГ ГҐГ¬ ГёГЁГ°ГЁГ­Гі Г­Г  100% */
+        text-align: center; /* Г–ГҐГ­ГІГ°ГЁГ°ГіГҐГ¬ ГІГҐГЄГ±ГІ ГўГ­ГіГІГ°ГЁ Г ГЎГ§Г Г¶Г  */
     }
 
 
@@ -214,10 +214,10 @@
         grid-template-columns: 50px auto 50px;
         grid-template-rows: 10px auto 10px;
         margin-top: 20px;
-        max-width: 100%; /* Максимальная ширина контейнера не больше 100% */
-        width: 100%; /* Ширина контейнера */
-        justify-content: center; /* Центровка контейнера */
-        box-sizing: border-box; /* Включение границ и отступов в размеры */
+        max-width: 100%; /* ГЊГ ГЄГ±ГЁГ¬Г Г«ГјГ­Г Гї ГёГЁГ°ГЁГ­Г  ГЄГ®Г­ГІГҐГ©Г­ГҐГ°Г  Г­ГҐ ГЎГ®Г«ГјГёГҐ 100% */
+        width: 100%; /* ГГЁГ°ГЁГ­Г  ГЄГ®Г­ГІГҐГ©Г­ГҐГ°Г  */
+        justify-content: center; /* Г–ГҐГ­ГІГ°Г®ГўГЄГ  ГЄГ®Г­ГІГҐГ©Г­ГҐГ°Г  */
+        box-sizing: border-box; /* Г‚ГЄГ«ГѕГ·ГҐГ­ГЁГҐ ГЈГ°Г Г­ГЁГ¶ ГЁ Г®ГІГ±ГІГіГЇГ®Гў Гў Г°Г Г§Г¬ГҐГ°Г» */
     }
 
     #rightPanel {
@@ -226,7 +226,7 @@
         min-width: 300px;
         min-height: 100px;
         box-sizing: border-box;
-        max-width: 100% !important; /* Максимальная ширина контейнера не больше 100% */
+        max-width: 100% !important; /* ГЊГ ГЄГ±ГЁГ¬Г Г«ГјГ­Г Гї ГёГЁГ°ГЁГ­Г  ГЄГ®Г­ГІГҐГ©Г­ГҐГ°Г  Г­ГҐ ГЎГ®Г«ГјГёГҐ 100% */
         width: 100% !important;
     }
 
@@ -332,21 +332,21 @@
 
 
     .features div {
-        display: flex; /* Используем Flexbox для детей */
-        flex-direction: column; /* Колонка, чтобы изображение было сверху, а текст снизу */
-        align-items: center; /* Центрирование по горизонтали */
-        justify-content: center; /* Центрирование по вертикали */
+        display: flex; /* Г€Г±ГЇГ®Г«ГјГ§ГіГҐГ¬ Flexbox Г¤Г«Гї Г¤ГҐГІГҐГ© */
+        flex-direction: column; /* ГЉГ®Г«Г®Г­ГЄГ , Г·ГІГ®ГЎГ» ГЁГ§Г®ГЎГ°Г Г¦ГҐГ­ГЁГҐ ГЎГ»Г«Г® Г±ГўГҐГ°ГµГі, Г  ГІГҐГЄГ±ГІ Г±Г­ГЁГ§Гі */
+        align-items: center; /* Г–ГҐГ­ГІГ°ГЁГ°Г®ГўГ Г­ГЁГҐ ГЇГ® ГЈГ®Г°ГЁГ§Г®Г­ГІГ Г«ГЁ */
+        justify-content: center; /* Г–ГҐГ­ГІГ°ГЁГ°Г®ГўГ Г­ГЁГҐ ГЇГ® ГўГҐГ°ГІГЁГЄГ Г«ГЁ */
         width: 30%;
         text-align: center;
         box-sizing: border-box;
-        padding: 20px; /* Опционально, для внутреннего отступа */
+        padding: 20px; /* ГЋГЇГ¶ГЁГ®Г­Г Г«ГјГ­Г®, Г¤Г«Гї ГўГ­ГіГІГ°ГҐГ­Г­ГҐГЈГ® Г®ГІГ±ГІГіГЇГ  */
     }
 
     .features img {
-        width: 90%; /* Ширина изображения на 100% контейнера */
+        width: 90%; /* ГГЁГ°ГЁГ­Г  ГЁГ§Г®ГЎГ°Г Г¦ГҐГ­ГЁГї Г­Г  100% ГЄГ®Г­ГІГҐГ©Г­ГҐГ°Г  */
         max-width: 100%;
-        height: auto; /* Автоматическое изменение высоты */
-        margin-bottom: 10px; /* Отступ снизу для изображения */
+        height: auto; /* ГЂГўГІГ®Г¬Г ГІГЁГ·ГҐГ±ГЄГ®ГҐ ГЁГ§Г¬ГҐГ­ГҐГ­ГЁГҐ ГўГ»Г±Г®ГІГ» */
+        margin-bottom: 10px; /* ГЋГІГ±ГІГіГЇ Г±Г­ГЁГ§Гі Г¤Г«Гї ГЁГ§Г®ГЎГ°Г Г¦ГҐГ­ГЁГї */
     }
 
     .card {
@@ -366,8 +366,8 @@
     }
 
     .textContent {
-        flex: 1; /* Занимаем доступное пространство внутри flex-контейнера */
-        text-align: left; /* Выравниваем текст внутри .textContent по левому краю */
+        flex: 1; /* Г‡Г Г­ГЁГ¬Г ГҐГ¬ Г¤Г®Г±ГІГіГЇГ­Г®ГҐ ГЇГ°Г®Г±ГІГ°Г Г­Г±ГІГўГ® ГўГ­ГіГІГ°ГЁ flex-ГЄГ®Г­ГІГҐГ©Г­ГҐГ°Г  */
+        text-align: left; /* Г‚Г»Г°Г ГўГ­ГЁГўГ ГҐГ¬ ГІГҐГЄГ±ГІ ГўГ­ГіГІГ°ГЁ .textContent ГЇГ® Г«ГҐГўГ®Г¬Гі ГЄГ°Г Гѕ */
         margin-top: 0;
         margin-bottom: 0;
         top: 0;
@@ -381,13 +381,13 @@
 
     .contact-map {
         width: 100%;
-        margin-bottom: 20px; /* Добавляем отступ снизу */
+        margin-bottom: 20px; /* Г„Г®ГЎГ ГўГ«ГїГҐГ¬ Г®ГІГ±ГІГіГЇ Г±Г­ГЁГ§Гі */
     }
 
     .contact-text {
         max-width: 100%;
         margin: 0;
-        text-align: center; /* Центрируем текст */
+        text-align: center; /* Г–ГҐГ­ГІГ°ГЁГ°ГіГҐГ¬ ГІГҐГЄГ±ГІ */
     }
 
     .contact-text h1 {
@@ -477,7 +477,7 @@
         color: white;
         text-decoration: none;
         font-size: 18px;
-        border-radius: 25px; /* Исправляем значение радиуса */
+        border-radius: 25px; /* Г€Г±ГЇГ°Г ГўГ«ГїГҐГ¬ Г§Г­Г Г·ГҐГ­ГЁГҐ Г°Г Г¤ГЁГіГ±Г  */
         margin-bottom: 10px;
         z-index: 10;
     }
@@ -490,35 +490,35 @@
         background-color: #E2E2E2;
         display: flex;
         flex-direction: column;
-        align-items: center; /* Центрирование по горизонтали */
-        text-align: center; /* Центрирование текста */
+        align-items: center; /* Г–ГҐГ­ГІГ°ГЁГ°Г®ГўГ Г­ГЁГҐ ГЇГ® ГЈГ®Г°ГЁГ§Г®Г­ГІГ Г«ГЁ */
+        text-align: center; /* Г–ГҐГ­ГІГ°ГЁГ°Г®ГўГ Г­ГЁГҐ ГІГҐГЄГ±ГІГ  */
         padding: 20px;
-        position: relative; /* Позиционирование относительно родительского элемента */
+        position: relative; /* ГЏГ®Г§ГЁГ¶ГЁГ®Г­ГЁГ°Г®ГўГ Г­ГЁГҐ Г®ГІГ­Г®Г±ГЁГІГҐГ«ГјГ­Г® Г°Г®Г¤ГЁГІГҐГ«ГјГ±ГЄГ®ГЈГ® ГЅГ«ГҐГ¬ГҐГ­ГІГ  */
     }
 
     .callus img {
-        position: absolute; /* Абсолютное позиционирование */
-        top: 50%; /* Центрирование по вертикали относительно родителя */
-        transform: translateY(-50%); /* Центрирование по вертикали */
-        width: 30%; /* Задаем ширину изображений */
-        max-width: 200px; /* Максимальная ширина изображений */
-        height: auto; /* Автоматическое изменение высоты для сохранения пропорций */
+        position: absolute; /* ГЂГЎГ±Г®Г«ГѕГІГ­Г®ГҐ ГЇГ®Г§ГЁГ¶ГЁГ®Г­ГЁГ°Г®ГўГ Г­ГЁГҐ */
+        top: 50%; /* Г–ГҐГ­ГІГ°ГЁГ°Г®ГўГ Г­ГЁГҐ ГЇГ® ГўГҐГ°ГІГЁГЄГ Г«ГЁ Г®ГІГ­Г®Г±ГЁГІГҐГ«ГјГ­Г® Г°Г®Г¤ГЁГІГҐГ«Гї */
+        transform: translateY(-50%); /* Г–ГҐГ­ГІГ°ГЁГ°Г®ГўГ Г­ГЁГҐ ГЇГ® ГўГҐГ°ГІГЁГЄГ Г«ГЁ */
+        width: 30%; /* Г‡Г Г¤Г ГҐГ¬ ГёГЁГ°ГЁГ­Гі ГЁГ§Г®ГЎГ°Г Г¦ГҐГ­ГЁГ© */
+        max-width: 200px; /* ГЊГ ГЄГ±ГЁГ¬Г Г«ГјГ­Г Гї ГёГЁГ°ГЁГ­Г  ГЁГ§Г®ГЎГ°Г Г¦ГҐГ­ГЁГ© */
+        height: auto; /* ГЂГўГІГ®Г¬Г ГІГЁГ·ГҐГ±ГЄГ®ГҐ ГЁГ§Г¬ГҐГ­ГҐГ­ГЁГҐ ГўГ»Г±Г®ГІГ» Г¤Г«Гї Г±Г®ГµГ°Г Г­ГҐГ­ГЁГї ГЇГ°Г®ГЇГ®Г°Г¶ГЁГ© */
     }
 
     .callus img:first-of-type {
-        left: 2%; /* Позиционирование первой картинки слева */
+        left: 2%; /* ГЏГ®Г§ГЁГ¶ГЁГ®Г­ГЁГ°Г®ГўГ Г­ГЁГҐ ГЇГҐГ°ГўГ®Г© ГЄГ Г°ГІГЁГ­ГЄГЁ Г±Г«ГҐГўГ  */
     }
 
     .callus img:last-of-type {
-        right: 2%; /* Позиционирование второй картинки справа */
+        right: 2%; /* ГЏГ®Г§ГЁГ¶ГЁГ®Г­ГЁГ°Г®ГўГ Г­ГЁГҐ ГўГІГ®Г°Г®Г© ГЄГ Г°ГІГЁГ­ГЄГЁ Г±ГЇГ°Г ГўГ  */
     }
 
     .callus h2 {
         font-size: 24px;
         color: #333;
-        margin: 10px 0 0 0; /* Отступы сверху и снизу */
-        position: relative; /* Относительное позиционирование для перекрытия */
-        z-index: 1; /* Поднятие текста над изображениями */
+        margin: 10px 0 0 0; /* ГЋГІГ±ГІГіГЇГ» Г±ГўГҐГ°ГµГі ГЁ Г±Г­ГЁГ§Гі */
+        position: relative; /* ГЋГІГ­Г®Г±ГЁГІГҐГ«ГјГ­Г®ГҐ ГЇГ®Г§ГЁГ¶ГЁГ®Г­ГЁГ°Г®ГўГ Г­ГЁГҐ Г¤Г«Гї ГЇГҐГ°ГҐГЄГ°Г»ГІГЁГї */
+        z-index: 1; /* ГЏГ®Г¤Г­ГїГІГЁГҐ ГІГҐГЄГ±ГІГ  Г­Г Г¤ ГЁГ§Г®ГЎГ°Г Г¦ГҐГ­ГЁГїГ¬ГЁ */
     }
 
     footer img {
@@ -529,9 +529,38 @@
     .avatar-div {
         width: 110px;
         height: 110px;
-        background-image: url('https://media.giphy.com/media/l2Sqgo31Jf0D0hRJK/giphy.gif');
         background-size: cover;
         background-position: center;
+    }
+
+    .unique-card-section {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem;
+        justify-content: center;
+        margin-left: 0;
+    }
+
+    .hoveringProPotolokCeiling main {
+        position: relative;
+        display: grid;
+        place-items: center;
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    .hoveringProPotolokCeiling main h1 {
+        font: 550 4.0rem 'arial-black', impact, sans-serif;
+        cursor: pointer;
+        overflow: hidden; /* РЎРєСЂС‹РІР°РµРј С‚РµРєСЃС‚, РєРѕС‚РѕСЂС‹Р№ РµС‰Рµ РЅРµ "РЅР°РїРµС‡Р°С‚Р°РЅ" */
+        border-right: .10em solid #483185; /* РљСѓСЂСЃРѕСЂ */
+        width: 0; /* РќР°С‡Р°Р»СЊРЅР°СЏ С€РёСЂРёРЅР° 0 РґР»СЏ Р°РЅРёРјР°С†РёРё */
+        white-space: nowrap;
+        margin-left: 9%;
+        animation: typing 5s steps(40, end) forwards; /* Р”РѕР±Р°РІР»СЏРµРј forwards РґР»СЏ СЃРѕС…СЂР°РЅРµРЅРёСЏ РєРѕРЅРµС‡РЅРѕРіРѕ СЃРѕСЃС‚РѕСЏРЅРёСЏ */
     }
 
 }
