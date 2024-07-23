@@ -6,6 +6,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/css-animation/1.1.1/css/animation.min.css">
+    <link rel="stylesheet" href="../static/scripts/jquery-ui-1.13.3/jquery-ui.min.css">
 
     
    
@@ -20,19 +21,8 @@
             justify-content: center;
         }
 
-         /* Устанавливаем GIF как фон для всей страницы */
-        body::before {
-            content: "";
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: url('https://media.giphy.com/media/y3wBjXMffuFjy/giphy.gif') no-repeat center center fixed;
-            background-size: cover;
-            z-index: -1; /* Помещаем фон позади всех элементов */
-            opacity: 0.5; /* Добавьте прозрачность, если хотите */
-        }
+
+         
 
         header, section {
             text-align: center;
@@ -120,11 +110,12 @@
         
 
         .features {
-            background-color: #F2F2F2;
+            background-color: #23242B;
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             align-items: center; /* Центрирование по вертикали */
+            height: 320px;
         }
 
         .features div{
@@ -136,6 +127,8 @@
             text-align: center;
             box-sizing: border-box;
             padding: 20px; /* Опционально, для внутреннего отступа */
+            transition: transform 0.3s ease, border 0.3s ease; /* Плавный переход для трансформации и границы */
+
         }
 
         .features img {
@@ -349,12 +342,29 @@
                 margin-bottom: 5px;
                 max-width: 100%; 
                 text-align: center;
-
+                filter: blur(5px);
+                transition: filter 0.3s ease, transform 0.3s ease; /* Плавный переход для размытия и увеличения */
+                transform-origin: center; /* Увеличение относительно центра */
             }
 
+            .ProPotolComand p:hover,
+            .ProPotolComand p.hovered {
+                filter: blur(0px);
+                transform: scale(1.1); /* Увеличение текста */
+            }
+
+            .ProPotolComand p.hovered {
+                filter: none; /* Убираем размытие */
+            }
+
+
+
             .ProPotolComand img {
-                border-radius: 35px;
-                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1);
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              transition: transform 0.1s;
+              transform-style: preserve-3d;
             }
 
             .card {
@@ -578,6 +588,7 @@
 
         .carousel {
             width: 100%; /* Задаем карусели ширину в 100% */
+           
             margin: auto;
             overflow: hidden;
             position: relative;
@@ -606,7 +617,7 @@
         }
 
         .testimonial {
-            background: #f9f9f9;
+            background: #23242B;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             padding: 30px;
@@ -615,13 +626,13 @@
 
         .testimonial p {
             font-size: 18px;
-            color: #555;
+            color: lightgray;
         }
 
         .testimonial h3 {
             margin-top: 10px;
             font-size: 22px;
-            color: #333;
+            color: white;
         }
 
         .carousel-buttons {
@@ -710,9 +721,9 @@
 
             footer {
                 padding: 20px;
-                background-color:#f9f9f9;
+                background-color: #23242B;
                 text-align: center;
-
+                color: white;
             }
 
             .social-icons {
@@ -745,7 +756,7 @@
             .footer-text {
                 margin-top: 10px;
                 font-size: 14px;
-                color: #333;
+                color: white;
             }
 
             footer img {
@@ -766,17 +777,44 @@
                 color: white;
                 text-decoration: none;
                 font-size: 18px;
-                border-radius: 25px; /* Исправляем значение радиуса */
+                border-radius: 25px;
                 margin-bottom: 10px;
+                transition: transform 0.3s ease;
+                position: relative;
+                z-index: 1;
+                overflow: hidden;
+                box-shadow: 0 0 0 0 rgba(138, 63, 252, 0.5);
+                animation: pulse 1.5s infinite;
             }
 
+            .callus a:hover {
+                animation: none;
+                transform: scale(1.1);
+            }
+
+            @keyframes pulse {
+                0% {
+                    transform: scale(0.9);
+                }
+                70% {
+                    transform: scale(1);
+                    box-shadow: 0 0 0 50px rgba(138, 63, 252, 0);
+                }
+                100% {
+                    transform: scale(0.9);
+                    box-shadow: 0 0 0 0 rgba(138, 63, 252, 0);
+                }
+            }
+       
+            
             .callus p {    
             
                 margin-top: 10px;
+
             }
 
             .callus {
-                background-color: #E2E2E2;
+                background-color: #23242B;
                 display: flex;
                 flex-direction: column;
                 align-items: center; /* Центрирование по горизонтали */
@@ -804,7 +842,7 @@
 
             .callus h2 {
                 font-size: 48px;
-                color: #333;
+                color: white;
                 margin: 25px 0 0 0; /* Отступы сверху и снизу */
                 position: relative; /* Относительное позиционирование для перекрытия */
                 z-index: 1; /* Поднятие текста над изображениями */
@@ -868,7 +906,7 @@
         }
 
         footer a {
-            color: black;
+            color: white;
             text-decoration: none; /* Убираем подчеркивание по умолчанию */
         }
 
@@ -931,21 +969,231 @@
         .avatar-div {
             width: 310px;
             height: 310px;
-            background-image: url('https://media.giphy.com/media/l2Sqgo31Jf0D0hRJK/giphy.gif');
             background-size: cover;
             background-position: center;
         }
 
 
+        .hoveringProPotolokCeiling * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+        }
+
+        .hoveringProPotolokCeiling {
+          height: 100vh;
+          display: grid;
+          place-items: center;
+          overflow: hidden;
+        }
+
+        .hoveringProPotolokCeiling main {
+          position: relative;
+          display: grid;
+          place-items: center;
+        }
+
+        .hoveringProPotolokCeiling main h1 {
+          font: 550 7.5rem 'arial-black', impact, sans-serif;
+          cursor: pointer;
+          overflow: hidden; /* Скрываем текст, который еще не "напечатан" */
+          border-right: .10em solid #483185; /* Курсор */
+          width: 0; /* Начальная ширина 0 для анимации */
+          white-space: nowrap;
+          animation: typing 5s steps(40, end) forwards; /* Добавляем forwards для сохранения конечного состояния */
+        }
+
+        @keyframes typing {
+          from { width: 0; }
+          to { width: 100%; }
+        }
+
+        @keyframes blink-caret {
+          from, to { border-color: transparent; }
+          50% { border-color: #483185; }
+        }
+
+        .typing::after {
+          content: '';
+          animation: blink-caret .75s step-end infinite;
+        }
+
+        .typing.complete {
+          border-right: none; /* Убираем мигающий курсор после завершения анимации */
+        }
+
+
+
+        .hoveringProPotolokCeiling main :where(h1, .image) {
+            grid-column: 1;
+            grid-row: 1;
+        }
+
+        .hoveringProPotolokCeiling .text {
+          color: black;
+        }
+
+        .hoveringProPotolokCeiling .stroke {
+          z-index: 10;
+          -webkit-text-stroke-width: 0.25rem;
+          -webkit-text-stroke-color: black !important;
+          -webkit-text-fill-color: transparent !important;
+        }
+
+        .hoveringProPotolokCeiling .stroke:hover + .image {
+            opacity: 1;
+            transform: translateX(0) rotate(-25deg);
+            transition: transform 1s, opacity 0.5s;
+        }
+
+        .hoveringProPotolokCeiling .image {
+          width: 400px;
+          opacity: 0;
+          transform: translateX(150%);
+          transition: transform 1s, opacity 0.5s 0.25s;
+        }
+
+       .unique-card-section {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+          gap: 2rem;
+          max-width: 1200px; /* Установите максимальную ширину контейнера */
+          margin: 0 auto; /* Центрирование контейнера */
+          padding: 2rem; /* Отступы вокруг контейнера */
+          justify-content: center; /* Центрирование содержимого по горизонтали */
+          margin-left: 8%;
+        }
+
+    .unique-card {
+      width: 300px;
+    }
+
+    .unique-card-content {
+      position: relative;
+      padding: 15rem 2rem;
+      transform-style: preserve-3d;
+      transition: transform 3s;
+    }
+    .unique-card:hover .unique-card-content {
+      transform: rotateY(180deg);
+    }
+
+    .unique-card-front,
+    .unique-card-back {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      backface-visibility: hidden;
+      transform-style: preserve-3d;
+    }
+
+    .unique-card-front,
+    .unique-card-back {
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-blend-mode: overlay;
+      color: white;
+    }
+
+    .unique-card-front {
+      background-color: rgba(0, 0, 0, 0.3);
+      align-items: center;
+      margin-left: 5%;
+    }
+
+    .unique-card-front::before {
+      content: "";
+      position: absolute;
+      inset: 1rem;
+      border: 3px solid #483185;
+      transform: translateZ(2rem);
+    }
+    .unique-title {
+      font-family: "Teko", sans-serif;
+      font-size: 4rem;
+      text-transform: uppercase;
+      line-height: 120%;
+      transform: translateZ(4.4rem);
+    }
+    .unique-sub-title {
+      font-size: 0.75rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      transform: translateZ(3rem);
+    }
+
+    .unique-card-back {
+      transform: rotateY(180deg);
+      gap: 0.5rem;
+    }
+
+    .unique-back-title {
+      font-family: "Teko", sans-serif;
+      font-size: 2.4rem;
+      font-weight: 600;
+      color: #483185;
+      text-transform: uppercase;
+      align-self: center;
+      transform: translateZ(2rem);
+    }
+
+    .unique-card-back span {
+      font-weight: 600;
+      color: #483185;
+    }
+    .unique-btn {
+      text-decoration: none;
+      font-weight: 500;
+      padding: 0.5rem 2.2rem;
+      color: #483185;
+      border: 2px solid white;
+      border-radius: 100px;
+      text-align: center;
+      align-self: center;
+      margin-top: 1rem;
+      transform: translateZ(2rem);
+      transition: 0.3s ease;
+    }
+    .unique-btn:hover {
+      background-color: #483185;
+      color: white;
+      border: 2px solid white;
+    }
+
+    .blob {
+        width: 300px;
+    }
+
+    .features p {
+        color: white;
+    }
+
+    .features div:hover {
+        transform: scale(1.1); /* Увеличение элемента */
+        border: 2px solid gray; /* Добавление серой рамки */
+        border-radius: 10px;
+    }
             
     </style>
     <script src="../static/scripts/jquery-ui-1.13.3/external/jquery/jquery.js"></script>
     <script src="../static/scripts/jquery-ui-1.13.3/jquery-ui.min.js"></script>
+    <script src="../static/scripts/jquery-ui-touch-punch-master/jquery.ui.touch-punch.js"></script>
+
+    <script src="../static/scripts/jquery-ui-touch-punch-master/jquery.ui.touch-punch.min.js"></script>
+    
     <link rel="stylesheet" href="../static/content/animation.css">
 
     <link rel="stylesheet" href="../static/content/create_ceiling_styles.css">
     <link rel="stylesheet" href="../static/content/create_ceiling_mobile_styles.css">
     <link rel="stylesheet" href="../static/content/create_ceiling_mobile.css">
+
     
     <script src="../static/scripts/create_ceiling_script.js"></script>
 </head>
@@ -957,6 +1205,14 @@
         </div>
         <a href="tel:+79785858080" class="phone-icon animate animate-dropDown" style='background-color: #483185;'>&#x260E;</a>
     </header>
+
+    <div class="hoveringProPotolokCeiling">
+        <main>
+            <h1 class='text'>PRO Потолок</h1>
+            <h1 class='stroke'>PRO Потолок</h1>
+            <img class='image' src='static/images/shadow.png'>
+        </main>
+    </div>
 
     <section  class="create-ceiling animate animate-dropDown">
         <!--<img src="static/images/arrow-left.png" alt="Левая стрелка" class="arrow arrow-left">-->
@@ -999,6 +1255,30 @@
             </div>
 
             <div class="avatar-div">
+                <div class="blob">
+                  <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                    <path fill="#8A3FFC" d="" transform="translate(100 100)">
+                      <animate attributeName="d" dur="6000ms" repeatCount="indefinite" values="M27.4,-38.3C36.5,-25,45.6,-17.3,48.1,-7.8C50.6,1.8,46.6,13.2,42.4,28.5C38.3,43.8,34.1,63,22,72.7C9.9,82.5,-10.1,82.7,-26.4,75.5C-42.8,68.3,-55.3,53.8,-58.1,38.6C-60.9,23.4,-54,7.5,-50.6,-8.5C-47.3,-24.6,-47.7,-40.9,-39.8,-54.4C-32,-68,-16,-78.8,-3.4,-74.7C9.1,-70.6,18.3,-51.7,27.4,-38.3Z;
+                                                                                             M46,-54.6C54.4,-47.8,52.2,-28.3,54.3,-10.5C56.4,7.4,62.7,23.6,60,40.6C57.3,57.6,45.6,75.4,31.4,76C17.3,76.7,0.7,60.3,-15.2,50.6C-31.1,41,-46.3,38.3,-56,28.8C-65.7,19.3,-70,3.1,-66.8,-11.2C-63.5,-25.5,-52.9,-37.9,-40.5,-44C-28.2,-50.1,-14.1,-49.9,2.4,-52.7C18.8,-55.5,37.7,-61.4,46,-54.6Z;
+
+                    M55.6,-62.7C68.6,-55.3,73.5,-34.5,75.1,-14.8C76.6,4.9,75,23.6,66.7,39.1C58.5,54.6,43.6,66.8,28.2,68.4C12.8,70.1,-3.1,61.2,-18.6,54.2C-34.1,47.2,-49.2,42.2,-57.9,31.3C-66.6,20.5,-68.9,4,-65,-10.2C-61,-24.4,-50.6,-36.2,-38.8,-43.9C-26.9,-51.5,-13.4,-55,3.9,-59.6C21.3,-64.3,42.5,-70.2,55.6,-62.7Z;
+
+                    M38.7,-43.8C50.6,-36.1,61,-24.3,60.8,-12.6C60.6,-0.9,49.7,10.8,43,27.1C36.3,43.5,33.7,64.5,22.8,73C11.8,81.5,-7.5,77.5,-18.5,66.7C-29.6,55.8,-32.5,38.1,-37,24.3C-41.6,10.4,-47.9,0.4,-47,-8.9C-46.1,-18.2,-37.9,-26.8,-28.8,-35C-19.8,-43.2,-9.9,-51,1.7,-53.1C13.4,-55.2,26.8,-51.5,38.7,-43.8Z;
+
+                    M27.4,-38.3C36.5,-25,45.6,-17.3,48.1,-7.8C50.6,1.8,46.6,13.2,42.4,28.5C38.3,43.8,34.1,63,22,72.7C9.9,82.5,-10.1,82.7,-26.4,75.5C-42.8,68.3,-55.3,53.8,-58.1,38.6C-60.9,23.4,-54,7.5,-50.6,-8.5C-47.3,-24.6,-47.7,-40.9,-39.8,-54.4C-32,-68,-16,-78.8,-3.4,-74.7C9.1,-70.6,18.3,-51.7,27.4,-38.3Z
+                    ">
+
+                          </animate>
+                    <animate attributeName="fill" dur="20s" repeatCount="indefinite" values="
+                          #8A3FFC;
+                          #3AC1EF;
+                          #F7B32B;
+                          #F22A7D;
+                          #8A3FFC;
+                        "></animate>
+                    </path>
+                  </svg>
+                </div>
             </div>
 
             <h2>Теперь просто перетаскивай элементы в область ниже</h2>
@@ -1137,7 +1417,7 @@
         </a>
     </div>
 
-    <div class="startSection">
+    <!-- <div class="startSection">
         <div class="textSection animate animate-fadeInLeft">
             <h2>Лучший потолок прямо сейчас c гарантией на 10 лет!</h2>
             <p>Мы являемся лидерами на рынке и делаем все быстро и качественно.</p>
@@ -1146,7 +1426,8 @@
         <div class="imageSection animate animate-fadeInRight">
             <img src="static/images/sticker.webp" alt="АватарГиф">
         </div>
-    </div>
+    </div> -->
+
 
     <section class="ProPotolComand animate animate-fadeInRight">
         <img src="static/images/dreamteam.webp" alt="Команда ProПотолок">
@@ -1177,8 +1458,177 @@
     </section>
 
 
+    <div class="unique-card-section">
+      <!-- Card 1 -->
+      <div class="unique-card">
+        <div class="unique-card-content">
+          <div class="unique-card-front" style="background-image: url('static/images/par.jpg');">
+            <p class="unique-sub-title">PRO Потолок</p>
+            <h1 class="unique-title">CLASSIC</h1>
+            <p class="unique-sub-title">2024</p>
+          </div>
 
-   <section class="types">
+          <div class="unique-card-back" style="background-image: url('static/images/par.jpg');">
+            <div class="unique-back-title">Classic</div>
+
+            <div class="unique-movie-description">
+              <span>Описание: </span>Удобное сочетание акцентного и рассеянного света. Легкая перестановка и добавление светильников.
+            </div>
+
+            <div class="unique-genre">
+              <span>Тип: </span>Классический
+            </div>
+
+            <div class="unique-release-date">
+              <span>Цена: </span>500руб кв.м
+            </div>
+            <a href="https://www.youtube.com/watch?v=hebWYacbdvc" class="unique-btn">ПОЗВОНИТЬ</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="unique-card">
+        <div class="unique-card-content">
+          <div class="unique-card-front" style="background-image: url('static/images/card1.jpeg');">
+            <p class="unique-sub-title">PRO Потолок</p>
+            <h1 class="unique-title">MODERN</h1>
+            <p class="unique-sub-title">2024</p>
+          </div>
+
+          <div class="unique-card-back" style="background-image: url('static/images/card1.jpeg');">
+            <div class="unique-back-title">Modern</div>
+
+            <div class="unique-movie-description">
+              <span>Описание: </span>Современные и стильные потолочные решения для вашего дома.
+            </div>
+
+            <div class="unique-genre">
+              <span>Тип: </span>Современный
+            </div>
+
+            <div class="unique-release-date">
+              <span>Цена: </span>700руб кв.м
+            </div>
+            <a href="https://www.youtube.com/watch?v=hebWYacbdvc" class="unique-btn">ПОЗВОНИТЬ</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="unique-card">
+        <div class="unique-card-content">
+          <div class="unique-card-front" style="background-image: url('static/images/card2.jpeg');">
+            <p class="unique-sub-title">PRO Потолок</п>
+            <h1 class="unique-title">LUXURY</h1>
+            <p class="unique-sub-title">2024</p>
+          </div>
+
+          <div class="unique-card-back" style="background-image: url('static/images/card2.jpeg');">
+            <div class="unique-back-title">Luxury</div>
+
+            <div class="unique-movie-description">
+              <span>Описание: </span>Элитные потолочные решения для самых взыскательных клиентов.
+            </div>
+
+            <div class="unique-genre">
+              <span>Тип: </span>Люкс
+            </div>
+
+            <div class="unique-release-date">
+              <span>Цена: </span>1000руб кв.м
+            </div>
+            <a href="https://www.youtube.com/watch?v=hebWYacbdvc" class="unique-btn">ПОЗВОНИТЬ</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="unique-card">
+        <div class="unique-card-content">
+          <div class="unique-card-front" style="background-image: url('static/images/card3.jpeg');">
+            <p class="unique-sub-title">PRO Потолок</п>
+            <h1 class="unique-title">ECO</h1>
+            <p class="unique-sub-title">2024</п>
+          </div>
+
+          <div class="unique-card-back" style="background-image: url('static/images/card3.jpeg');">
+            <div class="unique-back-title">Eco</div>
+
+            <div class="unique-movie-description">
+              <span>Описание: </span>Экологически чистые материалы и энергоэффективные решения.
+            </div>
+
+            <div class="unique-genre">
+              <span>Тип: </span>Экологичный
+            </div>
+
+            <div class="unique-release-date">
+              <span>Цена: </span>600руб кв.м
+            </div>
+            <a href="https://www.youtube.com/watch?v=hebWYacbdvc" class="unique-btn">ПОЗВОНИТЬ</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="unique-card">
+        <div class="unique-card-content">
+          <div class="unique-card-front" style="background-image: url('static/images/card5.jpeg');">
+            <p class="unique-sub-title">PRO Потолок</p>
+            <h1 class="unique-title">MINIMAL</h1>
+            <p class="unique-sub-title">2024</p>
+          </div>
+
+          <div class="unique-card-back" style="background-image: url('static/images/card5.jpeg');">
+            <div class="unique-back-title">Minimal</div>
+
+            <div class="unique-movie-description">
+              <span>Описание: </span>Простота и функциональность в каждом элементе.
+            </div>
+
+            <div class="unique-genre">
+              <span>Тип: </span>Минимализм
+            </div>
+
+            <div class="unique-release-date">
+              <span>Цена: </span>500руб кв.м
+            </div>
+            <a href="https://www.youtube.com/watch?v=hebWYacbdvc" class="unique-btn">ПОЗВОНИТЬ</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="unique-card">
+        <div class="unique-card-content">
+          <div class="unique-card-front" style="background-image: url('static/images/card6.jpeg');">
+            <p class="unique-sub-title">PRO Потолок</p>
+            <h1 class="unique-title">FUTURE</h1>
+            <p class="unique-sub-title">2024</p>
+          </div>
+
+          <div class="unique-card-back" style="background-image: url('static/images/card6.jpeg');">
+            <div class="unique-back-title">Future</div>
+
+            <div class="unique-movie-description">
+              <span>Описание: </span>Инновационные технологии и современные дизайны.
+            </div>
+
+            <div class="unique-genre">
+              <span>Тип: </span>Футуристический
+            </div>
+
+            <div class="unique-release-date">
+              <span>Цена: </span>800руб кв.м
+            </div>
+            <a href="https://www.youtube.com/watch?v=hebWYacbdvc" class="unique-btn">ПОЗВОНИТЬ</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+   <!-- <section class="types">
         <h2>Виды потолков</h2>
         <div class="card">
             <img src="static/images/track.png" alt="Трековый">
@@ -1220,7 +1670,7 @@
                 <a href="#" class="show-modal">Узнать больше</a>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <!-- Модальное окно -->
     <div id="modal" class="modal">
@@ -1316,7 +1766,67 @@
 
     </footer>
 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
     <script>
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const paragraphs = document.querySelectorAll('.ProPotolComand p');
+
+            paragraphs.forEach(paragraph => {
+                paragraph.addEventListener('mouseover', () => {
+                    paragraph.classList.add('hovered');
+                });
+            });
+        });
+
+
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const card = document.querySelector('.ProPotolComand');
+            const img = card.querySelector('img');
+
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left; // x позиция внутри элемента
+                const y = e.clientY - rect.top; // y позиция внутри элемента
+
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+
+                const rotateX = (y - centerY) / centerY * 20; // Коэффициент наклона по оси X
+                const rotateY = (x - centerX) / centerX * 20; // Коэффициент наклона по оси Y
+
+                img.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+            });
+
+            card.addEventListener('mouseleave', () => {
+                img.style.transform = 'rotateX(0) rotateY(0)'; // Возвращаем изображение в исходное положение
+            });
+        });
+
+        document.addEventListener("DOMContentLoaded", () => {
+          const h1 = document.querySelector('.hoveringProPotolokCeiling main h1');
+
+          const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                h1.classList.add('typing');
+                observer.unobserve(h1); // Останавливаем наблюдение после первого срабатывания
+
+                // Убираем мигающий курсор после завершения анимации
+                h1.addEventListener('animationend', () => {
+                  h1.classList.add('complete');
+                }, { once: true });
+              }
+            });
+          });
+
+          observer.observe(h1);
+        });
+
+
         document.addEventListener('DOMContentLoaded', () => {
             const h2Element = document.querySelector('.callus h2');
             const phoneNumber = '+79785858080'; // Замените на ваш номер телефона
