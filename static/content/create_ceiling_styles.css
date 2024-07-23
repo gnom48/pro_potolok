@@ -3,30 +3,31 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: white;
+    background-color: #23242B;
     padding: 0;
     position: relative;
     max-width: 100% !important;
     width: 100% !important;
-    margin-top: 30px;
+    margin-top: 40px;
     margin-bottom: 0px;
 }
 
 .create-ceiling h1 {
-    font-size: 3em;
+    font-size: 2em;
     justify-self: center;
+    color: white;
 }
 
-.create-ceiling h2 {
-    max-width: 50%;
-    
-    text-align: left;
-    margin: 0 50px;
-    font-size: 24px;
-    font-weight: 200;
-    color: #5e5e5e;
-    align-self: flex-start;
-}
+    .create-ceiling h2 {
+        max-width: 50%;
+        color: white;
+        text-align: left;
+        margin: 0 50px;
+        font-size: 24px;
+        font-weight: 200;
+        color: #5e5e5e;
+        align-self: flex-start;
+    }
 
 #ceiling-type-grid {
     align-self: center;
@@ -43,6 +44,7 @@
     grid-column-end: 4;
     grid-row-start: 1;
     grid-row-end: 2;
+    color: white;
 }
 
 #ceiling-type-grid h2:last-child {
@@ -66,10 +68,10 @@
 .separator {
     content: '';
     right: -1px;
-    width: 100%; /* Ширина разделителя */
+    width: 100%; /* РЁРёСЂРёРЅР° СЂР°Р·РґРµР»РёС‚РµР»СЏ */
     height: 50%;
     justify-self: center;
-    background-color: #999999; /* Цвет разделителя */
+    background-color: #999999; /* Р¦РІРµС‚ СЂР°Р·РґРµР»РёС‚РµР»СЏ */
     border-radius: 1.5px;
 }
 
@@ -93,6 +95,7 @@
 
 #ceiling-type-grid label {
     font-size: 1.5em;
+    color: lightgray;
 }
 
 #ceiling-type-grid .avatar-div {
@@ -101,8 +104,8 @@
     grid-row-start: 1;
     grid-row-end: 3;
     display: flex;
-    align-items: center; /* по вертикали */
-    justify-content: center; /* по горизонтали */
+    align-items: center; /* РїРѕ РІРµСЂС‚РёРєР°Р»Рё */
+    justify-content: center; /* РїРѕ РіРѕСЂРёР·РѕРЅС‚Р°Р»Рё */
 }
 
 #leftPanel {
@@ -121,27 +124,32 @@
 #lamp-div {
     grid-column-start: 1;
     grid-column-end: 2;
+    z-index: 100;
 }
 
 #lustre-div {
     grid-column-start: 3;
     grid-column-end: 4;
+    z-index: 100;
 }
 
 #track-div {
     grid-column-start: 5;
     grid-column-end: 6;
     margin-bottom: 0px;
+    z-index: 100;
 }
 
 #line-div {
     grid-column-start: 7;
     grid-column-end: 8;
+    z-index: 100;
 }
 
 #cornice-div {
     grid-column-start: 9;
     grid-column-end: 10;
+    z-index: 100;
 }
 
 #create-ceiling-container {
@@ -149,12 +157,14 @@
     position: relative;
     align-self: center;
     justify-content: center;
+    margin-top: 100px;
 }
 
 #leftPanel p {
     font-size: 1.5em;
     margin-bottom: 0px;
     margin-top: 5px;
+    color: lightgray;
 }
 
 .orig {
@@ -176,22 +186,25 @@
     height: 30%;
     position: relative;
     margin: 0px;
-    align-items: center; /* по вертикали */
-    justify-content: center; /* по горизонтали */
+    align-items: center; /* РїРѕ РІРµСЂС‚РёРєР°Р»Рё */
+    justify-content: center; /* РїРѕ РіРѕСЂРёР·РѕРЅС‚Р°Р»Рё */
 }
 
 .div-image img {
     max-width: 60%;
     max-height: 60%;
+    z-index: 1000;
 }
 
 .info p, .info span {
     font-size: 1em;
     text-align: center;
+    color: lightgray;
 }
 
 .info .price {
     font-weight: bold;
+    color: lightgray;
 }
 
 .create-ceiling .highlight {
@@ -271,6 +284,7 @@
     background-color: transparent;
     align-self: center;
     z-index: 100;
+    color: white;
 }
 
 #widthValue span, #heightValue span {
@@ -366,6 +380,7 @@
     display: flex;
     flex-direction: column;
     justify-content: left;
+    color: white;
 }
 
 #price-calculation div {
