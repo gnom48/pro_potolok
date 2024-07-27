@@ -18,16 +18,16 @@
     color: white;
 }
 
-    .create-ceiling h2 {
-        max-width: 50%;
-        color: white;
-        text-align: left;
-        margin: 0 50px;
-        font-size: 24px;
-        font-weight: 200;
-        color: #5e5e5e;
-        align-self: flex-start;
-    }
+.create-ceiling h2 {
+    max-width: 50%;
+    color: white;
+    text-align: left;
+    margin: 0 50px;
+    font-size: 24px;
+    font-weight: 200;
+    color: #5e5e5e;
+    align-self: flex-start;
+}
 
 #ceiling-type-grid {
     align-self: center;
@@ -115,7 +115,6 @@
     grid-template-columns: 1fr 3px 1fr 3px 1fr 3px 1fr 3px 1fr;
     border-radius: 20px;
     height: 200px !important;
-    position: relative !important;
     margin: 1% 0;
     margin-top: 60px;
     max-width: 100% !important;
@@ -172,7 +171,6 @@
     padding: 10px;
     justify-content: center;
     align-items: center;
-    position: relative;
     height: 280px !important;
     max-height: 100% !important;
     max-width: 100%;
