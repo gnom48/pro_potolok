@@ -68,7 +68,7 @@ $(function () {
         } else if (this.id === 'shadow_checkbox') {
             // Обработка изменения для теневого типа
             clearShadowFloating();
-            
+
             // Добавление теневого потолка
             var rightPanelWidth = rightPanel.width();
             var rightPanelHeight = rightPanel.height();
@@ -92,7 +92,7 @@ $(function () {
         } else if (this.id === 'floating_checkbox') {
             // Обработка изменения для парящего типа
             clearShadowFloating();
-            
+
             // Добавление парящего потолка
             var rightPanelWidth = rightPanel.width();
             var rightPanelHeight = rightPanel.height();
@@ -184,7 +184,7 @@ $(function () {
 
         square = Math.ceil(width * height);
         meter_square = square / 10000;
-        
+
         $('#santi-square').text(square);
         $('#meter-square').text(meter_square.toFixed(2));
 
@@ -207,8 +207,8 @@ $(function () {
             resizeInput(heightValue);
 
             square = Math.ceil(santiWidth * santiHeight);
-            meter_square = square/10000;
-            
+            meter_square = square / 10000;
+
             $('#santi-square').text(square);
             $('#meter-square').text(meter_square.toFixed(2));
 
@@ -216,7 +216,7 @@ $(function () {
             $('#totalPrice').text(totalPrice);
             $('#biggerPrice').text(totalPrice + 1000);
 
-            
+
         });
     }
 
@@ -247,6 +247,7 @@ $(function () {
     let _currentWidget;
     let _currentParent;
     let _clone;
+    let _divImage;
     var _draggables = document.querySelectorAll("div[class='orig']");
     console.log(_draggables);
     var _leftPanel = document.getElementById('leftPanel');
@@ -259,6 +260,8 @@ $(function () {
             draggable.draggable = true;
             draggable.addEventListener('touchmove', touchMove);
             draggable.addEventListener('touchend', touchEnd);
+            draggable.addEventListener('touchstart', touchStart);
+            draggable.addEventListener('touchcancel', touchCancel);
         });
     }
     else {
@@ -269,10 +272,14 @@ $(function () {
             snap: "#rightPanel", // прижатие к границам при приближении
             snapMode: "both",
             snapTolerance: 20, // расстояние для прижатия
+            //cursorAt: { top: this.height() / 2, left: this.width() / 2 },
             helper: function () {
                 var newItem = $(this).find('.div-image').clone();
 
                 var element = $(this).find('.div-image').find('img'); // получаем элемент, который нужно повернуть
+
+                newItem.find('img').css('max-width', '100%');
+                newItem.find('img').css('max-height', '100%');
 
                 var originalWidth = element.width() // Получаем исходную ширину изображения
                 var originalHeight = element.height(); // Получаем исходную высоту изображения
@@ -282,7 +289,19 @@ $(function () {
                 newItem.height(originalHeight);
 
                 var newDiv = $('<div class="moved-container"></div>');
+                console.log(newDiv);
                 newDiv.append(newItem);
+
+                //var divLeft = parseInt(newDiv.css("left"));
+                //var divTop = parseInt(newDiv.css("top"));
+                //console.log(`divLeft = ${divLeft} | divTop = ${divTop}`)
+
+                //newDiv.css({
+                //    "left": divLeft + (newDiv.width() / 2),
+                //    "top": divTop + (newDiv.height() / 2)
+                //});
+
+                //console.log(`left = ${newDiv.css("left")} | top = ${newDiv.css("top")}`);
 
                 //var currentHeight = newItem.height();  // получить высоту после добавления
                 //var newHeight = currentHeight + 16;
@@ -293,6 +312,23 @@ $(function () {
                 //newItem.css('width', newWidth + 'px');
                 return newDiv;
             },
+            //drag: function (event, ui) {
+            //    //debugger;
+            //    let createCeilingSection = $(document).find(".create-ceiling");
+            //    var top = event.pageY - (createCeilingSection.offset().top) - (_container.offsetTop) - (ui.helper.height() / 2);
+            //    var left = event.pageX - (createCeilingSection.offset().left) - (_container.offsetLeft) + (ui.helper.width() / 2);
+            //    //debugger;
+            //    console.log(`${event.pageY} - ${createCeilingSection.offset().top} - ${_container.offsetTop} - (${ui.helper.height()} / 2) = ${top}`);
+            //    console.log(`${event.pageX} - ${createCeilingSection.offset().left} - ${_container.offsetLeft} + (${ui.helper.width()} / 2) = ${left}`);
+            //    console.log(`left = ${left} | top = ${top}`);
+            //    console.log(`Before: left = ${ui.helper.css("left")} | top = ${ui.helper.css("top")}`);
+
+            //    ui.helper[0].style.position = 'absolute';
+            //    ui.helper[0].style.top = `${top}px`;
+            //    ui.helper[0].style.left = `${left}px`;
+                
+            //    console.log(`After: left = ${ui.helper.css("left")} | top = ${ui.helper.css("top")}`);
+            //},
         });
 
         $('#leftPanel').droppable({
@@ -332,6 +368,25 @@ $(function () {
 
                     // Create a new element with the image and text
                     var newItem = element.clone();
+                    console.log('New element created --------------------------------');
+                    console.log(newItem);
+
+                    let left = parseInt(newItem.css("left"));
+                    let top = parseInt(newItem.css("top"));
+
+                    console.log(`left = ${left} - ${rightPanel[0].offsetLeft}`);
+                    console.log(`top = ${top} - ${rightPanel[0].offsetTop}`);
+
+                    left -= rightPanel[0].offsetLeft;
+                    top -= rightPanel[0].offsetTop;
+
+                    console.log(`left: ${left} | top: ${top}`);
+
+                    newItem.css("left", left);
+                    newItem.css("top", top);
+
+                    console.log(`left: ${newItem.css("left")} | top: ${newItem.css("top")}`);
+
                     newItem.addClass('moved');
                     // newItem.removeClass('orig');
                     newItem.draggable({
@@ -359,7 +414,7 @@ $(function () {
         rightPanel.on('mouseenter', '.moved', function () {
             if ($(this).find('.div-image').hasClass('customizable')) {
                 var $rotateImage = $(this).find('.rotateButton');
-                debugger;
+
                 if ($rotateImage.length != 0) {
                     $rotateImage.show();
                     return;
@@ -418,57 +473,59 @@ $(function () {
         this.isMoved = true;
         //console.log(event);
         //debugger;
-        var divImage = event.target;
-        //console.log(event);
-        if (this.classList === undefined || !this.classList.contains('div-image')) {
-            while (divImage.classList === undefined || divImage.classList == null || divImage.classList.length == 0 || !divImage.classList.contains('orig')) {
-                //console.log(divImage);
-                divImage = divImage.parentNode;
-            }
-            divImage = divImage.querySelector("div.div-image");
-        }
-        else {
-            divImage = this;
-        }
-            
+
+        //console.log(_divImage);
         //debugger;
-        _clone = divImage.cloneNode(true);
-        _clone.style.position = 'relative';
-        _clone.style.top = `0px`;
-        _clone.style.left = `0px`;
-        
-        //console.log(divImage);
-        //debugger;
-        
+
         let touch = event.targetTouches[0];
 
-        var element = divImage.querySelector('img');
-        divImage.style.width = `${element.offsetWidth}px`;
-        divImage.style.height = `${element.offsetHeight}px`;
+        var element = _divImage.find('img');
 
-        var top = touch.pageY - (_container.offsetTop) - (divImage.offsetHeight / 2);
-        var left = touch.pageX - (_container.offsetLeft) - (divImage.offsetWidth / 2);
+        var originalWidth = element.width() // Получаем исходную ширину изображения
+        var originalHeight = element.height(); // Получаем исходную высоту изображения
 
-        //console.log(`${touch.pageY} - ${_container.offsetTop} - (${divImage.offsetHeight} / 2) = ${top}`);
-        //console.log(`${touch.pageX} - ${_container.offsetLeft} - (${divImage.offsetWidth} / 2) = ${left}`);
-        
-        divImage.style.position = 'absolute';
-        divImage.style.top = `${top}px`;
-        divImage.style.left = `${left}px`;
+        element.css('max-width', '100%');
+        element.css('max-height', '100%');
+
+        // Update the parent div dimensions
+        _divImage.width(originalWidth);
+        _divImage.height(originalHeight);
+
+        // element.style.removeProperty('max-width');
+        // element.style.removeProperty('max-height');
+        // _divImage.style.width = `${element.offsetWidth}px`;
+        // _divImage.style.height = `${element.offsetHeight}px`;
+
+        //debugger;
+        let createCeilingSection = document.querySelector("section.create-ceiling");
+        var top = touch.pageY - (createCeilingSection.offsetTop) - (_container.offsetTop) - (_divImage.height() / 2);
+        var left = touch.pageX - (createCeilingSection.offsetLeft) - (_container.offsetLeft) - (_divImage.width() / 2);
+
+        console.log(`${touch.pageY} - ${createCeilingSection.offsetTop} - ${_container.offsetTop} - (${_divImage.height()} / 2) = ${top}`);
+        console.log(`${touch.pageX} - ${createCeilingSection.offsetLeft} - ${_container.offsetLeft} - (${_divImage.width()} / 2) = ${left}`);
+        console.log(`left = ${left} | top = ${top}`);
+        _divImage.css({
+            'position': 'absolute',
+            'top': `${top}px`,
+            'left': `${left}px`
+        });
+        console.log(`After: left = ${_divImage.css("left")} | top = ${_divImage.css("top")} | width = ${_divImage.width()} | height = ${_divImage.height()}`);
+        // _divImage.style.position = 'absolute';
+        // _divImage.style.top = `${top}px`;
+        // _divImage.style.left = `${left}px`;
 
         //var div = document.createElement("div");
-        //var _width = divImage.offsetWidth;
-        //var _height = divImage.offsetHeight;
+        //var _width = _divImage.offsetWidth;
+        //var _height = _divImage.offsetHeight;
 
         //div.style.width = `${_width}px`;
         //div.style.height = `${_height}px`;
         //div.classList.add('moved-container');
 
-        //div.appendChild(divImage);
+        //div.appendChild(_divImage);
 
-        _currentWidget = divImage;
-        _currentParent = divImage.parentNode;
-            
+        _currentWidget = _divImage[0];
+        _currentParent = _currentWidget.parentNode;
         //debugger;
     }
 
@@ -483,22 +540,17 @@ $(function () {
         }
         else {
             if (!_currentWidget.classList.contains('moved')) {
-                _currentParent.insertBefore(_clone, _currentParent.children[0]);
+                debugger;
+                _currentParent.insertBefore(_clone[0], _currentParent.children[0]);
                 if (isInRightPanel(_currentWidget)) {
 
                     _currentWidget.addEventListener('touchmove', touchMove);
                     _currentWidget.addEventListener('touchend', touchEnd);
+                    _currentWidget.addEventListener('touchstart', touchStart);
+                    _currentWidget.addEventListener('touchcancel', touchCancel);
 
                     if (_currentWidget.classList.contains('customizable')) {
-                        _currentWidget.addEventListener('touchstart', function (event) {
-                            event.preventDefault();
-                            // установка флага нажатия
-                            this.isPressed = true;
-                        });
-                        _currentWidget.addEventListener('touchcancel', function (event) {
-                            // сброс флага нажатия при прерывании события
-                            this.isPressed = false;
-                        });
+                        
                         $(_currentWidget).click(function () {
                             // обработка клика по изображению
 
@@ -507,6 +559,7 @@ $(function () {
                             $(this).find('img').css('transform', 'rotate(' + currentRotation + 'deg)');
                             $(this).data('rotation', currentRotation); // сохраняем угол поворота для элемента
                         });
+
                         var newSize = prompt("Введите размер элемента в см");
 
                         if (newSize !== null) {
@@ -551,6 +604,40 @@ $(function () {
         }
     }
 
+    function touchStart(event) {
+        event.preventDefault();
+        // установка флага нажатия
+        this.isPressed = true;
+        _divImage = event.target;
+        //console.log(event);
+        if (this.classList === undefined || !this.classList.contains('div-image')) {
+            while (_divImage.classList === undefined || _divImage.classList == null || _divImage.classList.length == 0 || !_divImage.classList.contains('orig')) {
+                //console.log(divImage);
+                _divImage = _divImage.parentNode;
+            }
+            _divImage = _divImage.querySelector("div.div-image");
+        }
+        else {
+            _divImage = this;
+        }
+        _divImage = $(_divImage);
+
+        //debugger;
+        _clone = _divImage.clone();
+        _clone.css({
+            'position': 'relative',
+            'top': `0px`,
+            'left': `0px`,
+            'width': _divImage.width(),
+            'height': _divImage.height(),
+        });
+    }
+
+    function touchCancel(event) {
+        // сброс флага нажатия при прерывании события
+        this.isPressed = false;
+    }
+
     function isInRightPanel(node) {
         //console.log(`top | ${node.offsetTop} | ${_rightPanel.offsetTop}`);
         //console.log(`left | ${node.offsetLeft} | ${_rightPanel.offsetLeft}`);
@@ -581,14 +668,14 @@ $(function () {
         var inputNumber = parseInt($(this).val());
 
         // Проверка, является ли введенное значение числом
-        if ($.isNumeric(inputNumber) && inputNumber > 0) {
+        if ($.isNumeric(inputNumber) && inputNumber > 0) { 
             resizeInput($(this));
             handleEnteredValues();
         } else {
             document.getElementById('error-modal').showModal();
         }
     });
-    
+
 
     function resizeInput(input) {
         let length = input.val().length;
