@@ -222,6 +222,7 @@
 
         .ProPotolComand .textContent1 {
             max-width: 30%; /* Adjust max-width as needed */
+            margin-left: 2%;
         }
 
         .ProPotolComand h2 {
@@ -998,6 +999,7 @@
           cursor: pointer;
           overflow: hidden; /* Скрываем текст, который еще не "напечатан" */
           border-right: .10em solid #483185; /* Курсор */
+          color: #483185 !important;
           width: 0; /* Начальная ширина 0 для анимации */
           white-space: nowrap;
           animation: typing 5s steps(40, end) forwards; /* Добавляем forwards для сохранения конечного состояния */
@@ -1036,7 +1038,7 @@
         .hoveringProPotolokCeiling .stroke {
           z-index: 10;
           -webkit-text-stroke-width: 0.25rem;
-          -webkit-text-stroke-color: black !important;
+          -webkit-text-stroke-color: #483185 !important;
           -webkit-text-fill-color: transparent !important;
         }
 
@@ -1091,6 +1093,14 @@
       justify-content: center;
       backface-visibility: hidden;
       transform-style: preserve-3d;
+    }
+
+
+    .unique-card-back {
+        background: rgba(0, 0, 0, 0.5); /* Черный цвет с прозрачностью */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Тень для объема */
+        backdrop-filter: blur(10px); /* Размытие заднего фона */
+        -webkit-backdrop-filter: blur(10px); /* Размытие заднего фона для Safari */
     }
 
     .unique-card-front,
@@ -1152,7 +1162,7 @@
       text-decoration: none;
       font-weight: 500;
       padding: 0.5rem 2.2rem;
-      color: #483185;
+      color: white;
       border: 2px solid white;
       border-radius: 100px;
       text-align: center;
@@ -1160,11 +1170,10 @@
       margin-top: 1rem;
       transform: translateZ(2rem);
       transition: 0.3s ease;
+      background-color: #483185;
     }
     .unique-btn:hover {
-      background-color: #483185;
-      color: white;
-      border: 2px solid white;
+      scale: 1.2;
     }
 
     .blob {
@@ -1216,7 +1225,7 @@
 
     <section  class="create-ceiling animate animate-dropDown">
         <!--<img src="static/images/arrow-left.png" alt="Левая стрелка" class="arrow arrow-left">-->
-        <h1><span class="highlighter">Нарисуй</span> свой потолок сам и узнай <span class="highlighter">цену</span></h1>
+        <h1>Нарисуй свой потолок сам и узнай цену</h1>
         <div id="ceiling-type-grid">
             <h2>Для начала давай определимся с материалом и типом потолка:</h2>
 
@@ -1288,7 +1297,7 @@
             <div id="leftPanel">
                 <div id="lamp-div" class="orig">
                     <div class="div-image" data-value="400">
-                        <img src="../static/images/lamp_element.png" alt="Светильник">
+                        <img src="../static/images/Group.png" alt="Светильник">
                     </div>
                     <div class="info">
                         <p>Светильник</p>
@@ -1298,7 +1307,7 @@
                 <div class="separator"></div>
                 <div id="lustre-div" class="orig">
                     <div class="div-image" data-value="300">
-                        <img src="../static/images/lustre_element.png" alt="Люстра">
+                        <img src="../static/images/Люстра1.png" alt="Люстра">
                     </div>
                     <div class="info">
                         <p>Люстра</p>
@@ -1308,7 +1317,7 @@
                 <div class="separator"></div>
                 <div id="track-div" class="orig">
                     <div class="div-image customizable" data-value="400">
-                        <img src="../static/images/track_element.png" alt="Трек">
+                        <img src="../static/images/Track_ceiling.png" alt="Трек">
                     </div>
                     <div class="info">
                         <p>Трек</p>
@@ -1318,7 +1327,7 @@
                 <div class="separator"></div>
                 <div id="line-div" class="orig">
                     <div class="div-image customizable" data-value="2000">
-                        <img src="../static/images/line_element.png" alt="Световая линия">
+                        <img src="../static/images/Svets_lines.png" alt="Световая линия">
                     </div>
                     <div class="info">
                         <p>Световая линия</p>
@@ -1328,7 +1337,7 @@
                 <div class="separator"></div>
                 <div id="cornice-div" class="orig">
                     <div class="div-image customizable" data-value="400">
-                        <img src="../static/images/cornice_element.png" alt="Карниз">
+                        <img src="../static/images/Carnisee.png" alt="Карниз">
                     </div>
                     <div class="info">
                         <p>Карниз</p>
@@ -1433,7 +1442,7 @@
         <img src="static/images/dreamteam.webp" alt="Команда ProПотолок">
         <div class="textContent1">
             <h2>PRO Потолок</h2>
-            <p>Команда опытных и аккуратных монтажников, технологов и менеджеров, любящих свое дело. Мы возьмемся за проект любой сложности: от матового потолка в зале с одной люстрой до коттеджа со сложными линиями и встроенными трековыми системами и тканевой потолок.</p>
+            <p>Наша команда профессионалов с большим опытом – монтажники, технологи и менеджеры – увлечена своим делом. Мы беремся за любые проекты: от матовых потолков в залах до сложных потолочных конструкций с трековыми системами и тканевыми покрытиями в коттеджах. В PRO Потолок мы обеспечиваем безупречное качество и внимание к каждой детали.</p>
         </div>
     </section>
 
@@ -1472,7 +1481,7 @@
             <div class="unique-back-title">Classic</div>
 
             <div class="unique-movie-description">
-              <span>Описание: </span>Удобное сочетание акцентного и рассеянного света. Легкая перестановка и добавление светильников.
+              <span>Описание: </span>Простота и функциональность в каждом элементе.
             </div>
 
             <div class="unique-genre">
@@ -1480,9 +1489,9 @@
             </div>
 
             <div class="unique-release-date">
-              <span>Цена: </span>500руб кв.м
+              <span>Цена: </span>300руб кв.м
             </div>
-            <a href="https://www.youtube.com/watch?v=hebWYacbdvc" class="unique-btn">ПОЗВОНИТЬ</a>
+            <a href="tel:+79785858080" class="unique-btn">ПОЗВОНИТЬ</a>
           </div>
         </div>
       </div>
@@ -1492,25 +1501,25 @@
         <div class="unique-card-content">
           <div class="unique-card-front" style="background-image: url('static/images/card1.jpeg');">
             <p class="unique-sub-title">PRO Потолок</p>
-            <h1 class="unique-title">MODERN</h1>
+            <h1 class="unique-title">SHADOW</h1>
             <p class="unique-sub-title">2024</p>
           </div>
 
           <div class="unique-card-back" style="background-image: url('static/images/card1.jpeg');">
-            <div class="unique-back-title">Modern</div>
+            <div class="unique-back-title">Shadow</div>
 
             <div class="unique-movie-description">
-              <span>Описание: </span>Современные и стильные потолочные решения для вашего дома.
+              <span>Описание: </span>Создает эффект парящего потолка через теневой зазор.
             </div>
 
             <div class="unique-genre">
-              <span>Тип: </span>Современный
+              <span>Тип: </span>Теневой
             </div>
 
             <div class="unique-release-date">
-              <span>Цена: </span>700руб кв.м
+              <span>Цена: </span>500руб кв.м
             </div>
-            <a href="https://www.youtube.com/watch?v=hebWYacbdvc" class="unique-btn">ПОЗВОНИТЬ</a>
+            <a href="tel:+79785858080" class="unique-btn">ПОЗВОНИТЬ</a>
           </div>
         </div>
       </div>
@@ -1520,25 +1529,25 @@
         <div class="unique-card-content">
           <div class="unique-card-front" style="background-image: url('static/images/card2.jpeg');">
             <p class="unique-sub-title">PRO Потолок</п>
-            <h1 class="unique-title">LUXURY</h1>
+            <h1 class="unique-title">HOVER</h1>
             <p class="unique-sub-title">2024</p>
           </div>
 
           <div class="unique-card-back" style="background-image: url('static/images/card2.jpeg');">
-            <div class="unique-back-title">Luxury</div>
+            <div class="unique-back-title">Hover</div>
 
             <div class="unique-movie-description">
-              <span>Описание: </span>Элитные потолочные решения для самых взыскательных клиентов.
+              <span>Описание: </span>Особая конструкция и освещение визуально отделяют потолок от стен.
             </div>
 
             <div class="unique-genre">
-              <span>Тип: </span>Люкс
+              <span>Тип: </span>Парящий
             </div>
 
             <div class="unique-release-date">
-              <span>Цена: </span>1000руб кв.м
+              <span>Цена: </span>500руб кв.м
             </div>
-            <a href="https://www.youtube.com/watch?v=hebWYacbdvc" class="unique-btn">ПОЗВОНИТЬ</a>
+            <a href="tel:+79785858080" class="unique-btn">ПОЗВОНИТЬ</a>
           </div>
         </div>
       </div>
@@ -1548,25 +1557,25 @@
         <div class="unique-card-content">
           <div class="unique-card-front" style="background-image: url('static/images/card3.jpeg');">
             <p class="unique-sub-title">PRO Потолок</п>
-            <h1 class="unique-title">ECO</h1>
+            <h1 class="unique-title">LINES</h1>
             <p class="unique-sub-title">2024</п>
           </div>
 
           <div class="unique-card-back" style="background-image: url('static/images/card3.jpeg');">
-            <div class="unique-back-title">Eco</div>
+            <div class="unique-back-title">Lines</div>
 
             <div class="unique-movie-description">
-              <span>Описание: </span>Экологически чистые материалы и энергоэффективные решения.
+              <span>Описание: </span>Альтернатива светильникам, могут быть любой формы, основным или декоративным освещением.
             </div>
 
             <div class="unique-genre">
-              <span>Тип: </span>Экологичный
+              <span>Тип: </span>Световые линии
             </div>
 
             <div class="unique-release-date">
-              <span>Цена: </span>600руб кв.м
+              <span>Цена: </span>300руб кв.м
             </div>
-            <a href="https://www.youtube.com/watch?v=hebWYacbdvc" class="unique-btn">ПОЗВОНИТЬ</a>
+            <a href="tel:+79785858080" class="unique-btn">ПОЗВОНИТЬ</a>
           </div>
         </div>
       </div>
@@ -1576,25 +1585,25 @@
         <div class="unique-card-content">
           <div class="unique-card-front" style="background-image: url('static/images/card5.jpeg');">
             <p class="unique-sub-title">PRO Потолок</p>
-            <h1 class="unique-title">MINIMAL</h1>
+            <h1 class="unique-title">COVERT</h1>
             <p class="unique-sub-title">2024</p>
           </div>
 
           <div class="unique-card-back" style="background-image: url('static/images/card5.jpeg');">
-            <div class="unique-back-title">Minimal</div>
+            <div class="unique-back-title">Covert</div>
 
             <div class="unique-movie-description">
-              <span>Описание: </span>Простота и функциональность в каждом элементе.
+              <span>Описание: </span>Устанавливается глубже потолка, создавая эффект штор из-под потолка.
             </div>
 
             <div class="unique-genre">
-              <span>Тип: </span>Минимализм
+              <span>Тип: </span>Скрытый карниз
             </div>
 
             <div class="unique-release-date">
               <span>Цена: </span>500руб кв.м
             </div>
-            <a href="https://www.youtube.com/watch?v=hebWYacbdvc" class="unique-btn">ПОЗВОНИТЬ</a>
+            <a href="tel:+79785858080" class="unique-btn">ПОЗВОНИТЬ</a>
           </div>
         </div>
       </div>
@@ -1604,25 +1613,25 @@
         <div class="unique-card-content">
           <div class="unique-card-front" style="background-image: url('static/images/card6.jpeg');">
             <p class="unique-sub-title">PRO Потолок</p>
-            <h1 class="unique-title">FUTURE</h1>
+            <h1 class="unique-title">ECO</h1>
             <p class="unique-sub-title">2024</p>
           </div>
 
           <div class="unique-card-back" style="background-image: url('static/images/card6.jpeg');">
-            <div class="unique-back-title">Future</div>
+            <div class="unique-back-title">Eco</div>
 
             <div class="unique-movie-description">
-              <span>Описание: </span>Инновационные технологии и современные дизайны.
+              <span>Описание: </span>Экологичный выбор для заботящихся о здоровье дом.
             </div>
 
             <div class="unique-genre">
-              <span>Тип: </span>Футуристический
+              <span>Тип: </span>Тканевый
             </div>
 
             <div class="unique-release-date">
-              <span>Цена: </span>800руб кв.м
+              <span>Цена: </span>300руб кв.м
             </div>
-            <a href="https://www.youtube.com/watch?v=hebWYacbdvc" class="unique-btn">ПОЗВОНИТЬ</a>
+            <a href="tel:+79785858080" class="unique-btn">ПОЗВОНИТЬ</a>
           </div>
         </div>
       </div>
@@ -1690,7 +1699,7 @@
 
         <img src="static/images/4321.png" alt="Телефон"></img>
         <div>
-            <a href="#">Позвонить сейчас!</a>
+            <a href="tel:+79785858080">Позвонить сейчас!</a>
         </div>
     </section>
 
