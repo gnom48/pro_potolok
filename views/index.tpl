@@ -1451,17 +1451,17 @@
         <div class="features">
             <div>
                 <img src="static/images/resize.png" alt="Выполнение замеров абсолютно бесплатно">
-                <p>Выполнение замеров абсолютно бесплатно<span class="modal-open" data-text="Эта услуга платная">*</span></p>
+                <p>Замеры выполняем совершенно бесплатно<span class="modal-open" data-text="Эта услуга платная">*</span></p>
             </div>
 
             <div>
                 <img src="static/images/safety.png" alt="Работаем с пылесосами и укрываем обои пленкой">
-                <p>Работаем с пылесосами и укрываем стены пленкой <span class="modal-open" data-text="Эта услуга платная">**</span></p>
+                <p>Используем пылесосы и защищаем стены пленкой<span class="modal-open" data-text="Эта услуга платная">**</span></p>
             </div>
 
             <div>
                 <img src="static/images/payy.png" alt="Оплата после выполнения всех работ">
-                <p>Оплата после выполнения всех работ</p>
+                <p>Оплата производится только по завершении всех работ</p>
             </div>
         </div>
     </section>
