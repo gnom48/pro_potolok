@@ -1096,12 +1096,7 @@
     }
 
 
-    .unique-card-back {
-        background: rgba(0, 0, 0, 0.5); /* Черный цвет с прозрачностью */
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Тень для объема */
-        backdrop-filter: blur(10px); /* Размытие заднего фона */
-        -webkit-backdrop-filter: blur(10px); /* Размытие заднего фона для Safari */
-    }
+
 
     .unique-card-front,
     .unique-card-back {
