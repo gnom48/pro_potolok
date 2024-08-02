@@ -222,6 +222,7 @@
         width: 100%; /* Ширина контейнера */
         justify-content: center; /* Центровка контейнера */
         box-sizing: border-box; /* Включение границ и отступов в размеры */
+        margin-left: 5%;
     }
 
     #rightPanel {
