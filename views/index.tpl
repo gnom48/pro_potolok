@@ -1760,7 +1760,7 @@
             <a href="https://vk.com/pro_potoloksev" target="_blank" class="social-icon">
                 <img src="static/images/VK1.png" alt="VK">
             </a>
-            <a href="https://t.me" target="_blank" class="social-icon">
+            <a href="https://t.me/PRO_Potolok92" target="_blank" class="social-icon">
                 <img src="static/images/tg.png" alt="Telegram">
             </a>
         </div>
