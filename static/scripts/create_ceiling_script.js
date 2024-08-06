@@ -331,12 +331,77 @@ $(function () {
             //},
         });
 
-        $('#leftPanel').droppable({
-            accept: ".moved",
-            hoverClass: "hover",
+        $('#create-ceiling-container').droppable({
             drop: function (event, ui) {
-                addPrice(ui.helper.find('.div-image'), -1);
-                ui.draggable.remove();
+                debugger;
+                
+                if (ui.draggable.hasClass('moved')) {
+                    if (!isInRightPanelAbs(ui.helper[0])) {
+                        addPrice(ui.helper.find('.div-image'), -1);
+                        ui.draggable.remove();
+                    }
+                }
+                else {
+                    if (!isInRightPanel(ui.helper[0]))
+                        ui.helper.remove();
+                    else {
+                        if (rightPanel.hasClass('clear')) {
+                            rightPanel.resizable('disable');
+                            $('#roomDimensionsForm button').prop('disabled', true);
+                            rightPanel.children().eq(0).remove();
+                            rightPanel.removeClass('clear');
+                        }
+
+                        $('.ui-resizable-handle').css("background-color", "#aaa")
+                        $('#rightPanel > span').css("font-weight", 700);
+
+                        // Code to handle dropping
+                        var element = ui.helper;
+
+                        // Create a new element with the image and text
+                        var newItem = element.clone();
+                        console.log('New element created --------------------------------');
+                        console.log(newItem);
+
+                        let left = parseInt(newItem.css("left"));
+                        let top = parseInt(newItem.css("top"));
+
+                        console.log(`left = ${left} - ${rightPanel[0].offsetLeft}`);
+                        console.log(`top = ${top} - ${rightPanel[0].offsetTop}`);
+
+                        left -= rightPanel[0].offsetLeft;
+                        top -= rightPanel[0].offsetTop;
+
+                        console.log(`left: ${left} | top: ${top}`);
+
+                        newItem.css("left", left);
+                        newItem.css("top", top);
+
+                        console.log(`left: ${newItem.css("left")} | top: ${newItem.css("top")}`);
+
+                        newItem.addClass('moved');
+                        // newItem.removeClass('orig');
+                        newItem.draggable({
+                            containment: "#create-ceiling-container",
+                            grid: [gridWidth, gridWidth],
+                            snap: "#rightPanel",
+                            snapMode: "both",
+                            snapTolerance: 20
+                        });
+
+                        if (newItem.find('.div-image').hasClass('customizable')) {
+                            // Show modal for size input
+                            var newSize = prompt("Введите размер элемента в см");
+                            //debugger;
+                            if (newSize == null) return;
+                            newItem.append('<p class="size-label">' + newSize + 'см.</p>');
+                            newItem.data("size", newSize);
+                        }
+                        rightPanel.append(newItem);
+                        addPrice(newItem.find('.div-image'), 1);
+                    }
+                }
+                    
                 if (rightPanel.children().length == 3) {
                     rightPanel.resizable('enable');
                     rightPanel.addClass('clear');
@@ -349,66 +414,13 @@ $(function () {
             }
         });
 
+        $('#leftPanel').droppable({
+            accept: ".moved",
+            hoverClass: "hover"
+        });
+
         rightPanel.droppable({
             hoverClass: "hover",
-            drop: function (event, ui) {
-                if (!ui.helper.hasClass('moved')) {
-                    if ($(this).hasClass('clear')) {
-                        $(this).resizable('disable');
-                        $('#roomDimensionsForm button').prop('disabled', true);
-                        $(this).children().eq(0).remove();
-                        $(this).removeClass('clear');
-                    }
-
-                    $('.ui-resizable-handle').css("background-color", "#aaa")
-                    $('#rightPanel > span').css("font-weight", 700);
-
-                    // Code to handle dropping
-                    var element = ui.helper;
-
-                    // Create a new element with the image and text
-                    var newItem = element.clone();
-                    console.log('New element created --------------------------------');
-                    console.log(newItem);
-
-                    let left = parseInt(newItem.css("left"));
-                    let top = parseInt(newItem.css("top"));
-
-                    console.log(`left = ${left} - ${rightPanel[0].offsetLeft}`);
-                    console.log(`top = ${top} - ${rightPanel[0].offsetTop}`);
-
-                    left -= rightPanel[0].offsetLeft;
-                    top -= rightPanel[0].offsetTop;
-
-                    console.log(`left: ${left} | top: ${top}`);
-
-                    newItem.css("left", left);
-                    newItem.css("top", top);
-
-                    console.log(`left: ${newItem.css("left")} | top: ${newItem.css("top")}`);
-
-                    newItem.addClass('moved');
-                    // newItem.removeClass('orig');
-                    newItem.draggable({
-                        containment: "#create-ceiling-container",
-                        grid: [gridWidth, gridWidth],
-                        snap: "#rightPanel",
-                        snapMode: "both",
-                        snapTolerance: 20
-                    });
-
-                    if (newItem.find('.div-image').hasClass('customizable')) {
-                        // Show modal for size input
-                        var newSize = prompt("Введите размер элемента в см");
-                        //debugger;
-                        if (newSize == null) return;
-                        newItem.append('<p class="size-label">' + newSize + 'см.</p>');
-                        newItem.data("size", newSize);
-                    }
-                    rightPanel.append(newItem);
-                    addPrice(newItem.find('.div-image'), 1);
-                }
-            }
         });
 
         rightPanel.on('mouseenter', '.moved', function () {
@@ -540,7 +552,7 @@ $(function () {
         }
         else {
             if (!_currentWidget.classList.contains('moved')) {
-                debugger;
+                //debugger;
                 _currentParent.insertBefore(_clone[0], _currentParent.children[0]);
                 if (isInRightPanel(_currentWidget)) {
 
@@ -587,16 +599,23 @@ $(function () {
                     _currentWidget.classList.add('moved');
                     //debugger;
                     _rightPanel.append(_currentWidget);
+                    _rightPanel.children[0].style.visibility = 'collapse';
                     addPrice($(_currentWidget), 1);
                 }
                 else {
                     _currentWidget.remove();
+                    if (_rightPanel.children.length == 1) {
+                        _rightPanel.children[0].style.visibility = 'visible';
+                    }
                     addPrice($(_currentWidget), -1);
                 }
             }
             else
                 if (!isInRightPanel(_currentWidget)) {
                     _currentWidget.remove();
+                    if (_rightPanel.children.length == 1) {
+                        _rightPanel.children[0].style.visibility = 'visible';
+                    }
                     addPrice($(_currentWidget), -1);
                 }
 
@@ -639,10 +658,11 @@ $(function () {
     }
 
     function isInRightPanel(node) {
-        //console.log(`top | ${node.offsetTop} | ${_rightPanel.offsetTop}`);
-        //console.log(`left | ${node.offsetLeft} | ${_rightPanel.offsetLeft}`);
-        //console.log(`left + width | ${node.offsetLeft + node.offsetWidth} | ${_rightPanel.offsetLeft + _rightPanel.offsetWidth}`);
-        //console.log(`top + height | ${node.offsetTop + node.offsetHeight} | ${_rightPanel.offsetTop + _rightPanel.offsetHeight}`);
+        console.log(`top | ${node.offsetTop} | ${_rightPanel.offsetTop}`);
+        console.log(`left | ${node.offsetLeft} | ${_rightPanel.offsetLeft}`);
+        console.log(`top + height | ${node.offsetTop + node.offsetHeight} | ${_rightPanel.offsetTop + _rightPanel.offsetHeight}`);
+        console.log(`left + width | ${node.offsetLeft + node.offsetWidth} | ${_rightPanel.offsetLeft + _rightPanel.offsetWidth}`);
+        
 
         if (node.offsetTop > _rightPanel.offsetTop &&
             node.offsetLeft > _rightPanel.offsetLeft &&
@@ -651,6 +671,19 @@ $(function () {
             return true;
         return false;
     }
+
+    function isInRightPanelAbs(node) {
+        console.log(`top | ${node.offsetTop} | ${_rightPanel.offsetTop}`);
+        console.log(`left | ${node.offsetLeft} | ${_rightPanel.offsetLeft}`);
+        console.log(`left + width | ${node.offsetLeft + node.offsetWidth} | ${_rightPanel.offsetLeft + _rightPanel.offsetWidth}`);
+        console.log(`top + height | ${node.offsetTop + node.offsetHeight} | ${_rightPanel.offsetTop + _rightPanel.offsetHeight}`);
+
+        if (node.offsetTop >= 0 && node.offsetLeft >= 0 &&
+            ((node.offsetLeft + node.offsetWidth) < _rightPanel.offsetWidth) &&
+            ((node.offsetTop + node.offsetHeight) < _rightPanel.offsetHeight))
+            return true;
+        return false;
+    }   
 
     widthValue.on('input', function () {
         var inputNumber = parseInt($(this).val());
