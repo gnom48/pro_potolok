@@ -1104,10 +1104,11 @@
       background-repeat: no-repeat;
       background-blend-mode: overlay;
       color: white;
+      background-color: rgba(0, 0, 0, 0.4);
     }
 
     .unique-card-front {
-      background-color: rgba(0, 0, 0, 0.3);
+      background-color: rgba(0, 0, 0, 0.4);
       align-items: center;
       margin-left: 5%;
     }
