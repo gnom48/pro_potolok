@@ -570,5 +570,12 @@
         transition: transform 1s, opacity 0.5s 0.25s;
     }
 
+    .hoveringProPotolokCeiling .stroke {
+          z-index: 10;
+          -webkit-text-stroke-width: 0.10rem;
+          -webkit-text-stroke-color: #483185 !important;
+          -webkit-text-fill-color: transparent !important;
+        }
+
 
 }
