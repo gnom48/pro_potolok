@@ -213,7 +213,7 @@
         font-size: 0.4em;
     }
 
-/*     #rightPanel-container {
+     #rightPanel-container {
         display: grid;
         grid-template-columns: 50px auto 20px;
         grid-template-rows: 10px auto 20px;
@@ -223,22 +223,9 @@
         justify-content: center; /* Центровка контейнера */
         box-sizing: border-box; /* Включение границ и отступов в размеры */
         margin-left: 5%;
-    } */
-
-    /*     ВРЕМЕННЫЙ КОЛХОЗ - ПОТОМ СДЕЛАТЬ НОРМАЛЬНО!!! */
-
-    #rightPanel-container {
-        display: grid;
-        grid-template-columns: 50px auto 20px;
-        grid-template-rows: 10px auto 20px;
-        margin-top: 20px;
-        max-width: 90%; /* Максимальная ширина контейнера не больше 100% */
-        justify-content: center; /* Центровка контейнера */
-        box-sizing: border-box; /* Включение границ и отступов в размеры */
-        margin-left: 5%;
     }
 
-/*     #rightPanel {
+     #rightPanel {
         border: 1px solid black;
         background-color: #F2F2F2;
         min-width: 300px;
@@ -246,17 +233,7 @@
         box-sizing: border-box;
         max-width: 100% !important; /* Максимальная ширина контейнера не больше 100% */
         width: 100% !important;
-    } */
-
-/*     ВРЕМЕННЫЙ КОЛХОЗ - ПОТОМ СДЕЛАТЬ НОРМАЛЬНО!!! */
-     #rightPanel {
-        border: 1px solid black;
-        background-color: #F2F2F2;
-        min-width: 90%;
-        min-height: 100px;
-        box-sizing: border-box;
-        max-width: 100% !important; /* Максимальная ширина контейнера не больше 100% */
-    }
+    } 
 
     #rightPanel .clear-div {
         line-height: 20px;
