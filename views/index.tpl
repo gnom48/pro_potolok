@@ -1144,7 +1144,7 @@
       font-family: "Teko", sans-serif;
       font-size: 2.4rem;
       font-weight: 600;
-      color: #483185;
+      color: white;
       text-transform: uppercase;
       align-self: center;
       transform: translateZ(2rem);
@@ -1152,7 +1152,7 @@
 
     .unique-card-back span {
       font-weight: 600;
-      color: #483185;
+      color: white;
     }
     .unique-btn {
       text-decoration: none;
