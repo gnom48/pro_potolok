@@ -214,7 +214,7 @@
 
      #rightPanel-container {
         display: grid;
-        grid-template-columns: 50px auto 50px;
+        grid-template-columns: 50px auto 30px;
         grid-template-rows: 10px auto 20px;
         margin-top: 20px;
         max-width: 100%; /* Максимальная ширина контейнера не больше 100% */
