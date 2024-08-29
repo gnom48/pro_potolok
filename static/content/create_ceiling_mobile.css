@@ -2,7 +2,6 @@
 
     body {
         max-width: 100% !important;
-        overflow-x: hidden;
     }
 
     .create-ceiling {
@@ -107,9 +106,9 @@
     }
 
     .ProPotolComand .textContent1 {
-        width: 100%; /* Устанавливаем ширину на 100% */
+        width: 98%; /* Устанавливаем ширину на 100% */
         text-align: center; /* Центрируем текст внутри блока */
-        min-width: 100% !important;
+        min-width: 98% !important;
     }
 
     .ProPotolComand h2 {
