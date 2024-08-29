@@ -227,7 +227,7 @@
      #rightPanel {
         border: 1px solid black;
         background-color: #F2F2F2;
-        min-width: 300px;
+        min-width: 260px;
         min-height: 100px;
         box-sizing: border-box;
         max-width: 100% !important; /* Максимальная ширина контейнера не больше 100% */
@@ -532,15 +532,27 @@
         background-position: center;
     }
 
-    .unique-card-section {
+   .unique-card-section {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-template-columns: repeat(auto-fit, 300px); 
         gap: 2rem;
         max-width: 1200px;
         margin: 0 auto;
         padding: 2rem;
-        justify-content: center;
-        margin-left: 0;
+        justify-content: center; 
+        box-sizing: border-box; 
+    }
+
+
+    .unique-card-front {
+        background-color: rgba(0, 0, 0, 0.4);
+        display: flex; 
+        justify-content: center; 
+        align-items: center; 
+        margin-left: auto; 
+        margin-right: auto; 
+        text-align: center; 
+        padding: 1rem; 
     }
 
     .hoveringProPotolokCeiling main {
