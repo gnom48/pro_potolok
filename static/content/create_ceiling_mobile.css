@@ -548,34 +548,54 @@
         position: relative;
         display: grid;
         place-items: center;
-        width: 100% !important;
-        max-width: 100% !important;
+        width: 82% !important;
     }
 
     .hoveringProPotolokCeiling main h1 {
-        font: 550 4.0rem 'arial-black', impact, sans-serif;
+        font-weight: 500; /* Используем стандартное свойство font-weight */
+        font-size: 3rem; /* Размер текста */
+        font-family: 'Inter', sans-serif;
+            
         cursor: pointer;
         overflow: hidden; /* Скрываем текст, который еще не "напечатан" */
-        border-right: .10em solid #483185; /* Курсор */
+        border-right: 0.10em solid #483185; /* Курсор */
         width: 0; /* Начальная ширина 0 для анимации */
         white-space: nowrap;
-        margin-left: 9%;
         animation: typing 5s steps(40, end) forwards; /* Добавляем forwards для сохранения конечного состояния */
     }
 
+    .hoveringProPotolokCeiling main h1.complete {
+        width: auto; /* Ширина будет зависеть от содержимого */
+        border-right: none; /* Убираем мигающий курсор после завершения анимации */
+    }
+
+    @keyframes typing {
+        from {
+            width: 0;
+        }
+
+        to {
+            width: 100%;
+        }
+    }
+
+    /* Выровняйте толщину и начертание шрифта */
+    .hoveringProPotolokCeiling .stroke {
+        z-index: 10;
+        -webkit-text-stroke-width: 0.10rem;
+        -webkit-text-stroke-color: #483185 !important;
+        -webkit-text-fill-color: transparent !important;
+        font-weight: 500; /* Поддержка одинаковой толщины текста */
+        font-family: 'Inter', sans-serif;
+    }
+
+    /* Оптимизация переходов */
     .hoveringProPotolokCeiling .image {
-        width: 200px;
+        width: 100%;
         opacity: 0;
         transform: translateX(150%);
         transition: transform 1s, opacity 0.5s 0.25s;
     }
-
-    .hoveringProPotolokCeiling .stroke {
-          z-index: 10;
-          -webkit-text-stroke-width: 0.10rem;
-          -webkit-text-stroke-color: #483185 !important;
-          -webkit-text-fill-color: transparent !important;
-        }
 
 
 }
