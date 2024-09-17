@@ -8,9 +8,32 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/css-animation/1.1.1/css/animation.min.css">
     <link rel="stylesheet" href="../static/scripts/jquery-ui-1.13.3/jquery-ui.min.css">
 
-    
-   
-    <title>PRO Потолок</title>
+    <title>PRO Потолок - Натяжные потолки в Севастополе от 300 руб за квадратный метр</title>
+    <meta name="description" content="Ищете идеальные натяжные потолки? PRO Потолок предлагает широкий выбор стилей и материалов для любого интерьера. Профессиональная установка за 1 день с гарантией качества. Бесплатный замер и ПОДАРОК для новых клиентов. Доставка и монтаж по Севастополю и Крыму!">
+
+    <meta name="robots" content="index, follow">
+
+    <meta name="keywords" content="натяжные потолки, установка потолков, натяжные потолки цены, монтаж натяжных потолков, PRO Потолок, натяжные потолки в Севастополе, натяжные потолки в Крыму, купить натяжные потолки, потолки под ключ">
+
+
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript" >
+    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+    m[i].l=1*new Date();
+    for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+    k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+    ym(98372361, "init", {
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true,
+            webvisor:true
+    });
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/98372361" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+
     <style>
         body {
             font-family: 'Inter', sans-serif;;
