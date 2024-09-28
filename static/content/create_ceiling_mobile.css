@@ -217,8 +217,8 @@
         grid-template-columns: 50px auto 30px;
         grid-template-rows: 10px auto 20px;
         margin-top: 20px;
-        max-width: 100%; /* Максимальная ширина контейнера не больше 100% */
-        width: 100%; /* Ширина контейнера */
+        max-width: 95%; /* Максимальная ширина контейнера не больше 100% */
+        width: 95%; /* Ширина контейнера */
         justify-content: center; /* Центровка контейнера */
         box-sizing: border-box; /* Включение границ и отступов в размеры */
         margin-left: 5%;
