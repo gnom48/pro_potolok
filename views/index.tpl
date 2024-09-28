@@ -82,19 +82,6 @@
             font-weight: 800;
             
         }
-        .main-header .phone-icon {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            background-color: #000;
-            color: #fff;
-            border-radius: 50%;
-            text-decoration: none;
-            font-size: 20px;
-            margin-right: 2%;
-        }
 
         .call-now {
             background-color: #000;
