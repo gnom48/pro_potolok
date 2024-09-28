@@ -1231,7 +1231,61 @@
             <img src="static/images/avatar-2.png" alt="Avatar" class="animate animate-dropDown">
             <h1 class="animate animate-dropDown">PRO Потолок</h1>
         </div>
-        <a href="tel:+79785858080" class="phone-icon animate animate-dropDown" style='background-color: #483185;'>&#x260E;</a>
+        <a href="tel:+79785858080" class="phone-icon">+7 978 585 80 80</a>
+
+        <style>
+        /* Стили для мобильной версии */
+        @media (max-width: 768px) {
+            .main-header .phone-icon {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 40px;
+                height: 40px;
+                color: #fff;
+                border-radius: 50%;
+                text-decoration: none;
+                font-size: 20px;
+                margin-right: 2%;
+                font-size: 0;
+            }
+            .phone-icon::before {
+            content: "\260E"; /* Иконка телефона */
+            font-size: 24px;  /* Размер иконки */
+            }
+        }
+
+        /* Стили для компьютерной версии */
+        @media (min-width: 769px) {
+            .phone-icon::before {
+            content: ""; /* Убираем иконку в десктопной версии */
+            }
+
+            .phone-icon {
+            border-radius: 15px;
+            font-size: 20px; /* Отображаем текст номера */
+            margin-right: 4%;
+            transition: transform 0.3s ease, background-color 0.3s ease; /* Плавный переход для увеличения */
+            }
+
+            .phone-icon:hover {
+            transform: scale(1.2); /* Увеличиваем элемент на 20% при наведении */
+            background-color: #5a42a3; /* Меняем цвет фона при наведении */
+            }
+        }
+
+        /* Общие стили */
+        .phone-icon {
+            background-color: #483185;
+            padding: 6px;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block; /* Чтобы элемент корректно отображался как ссылка */
+            white-space: nowrap; /* Не переносить текст на новую строку */
+            border-radius: 15px;
+        }
+        </style>
     </header>
 
     <div class="hoveringProPotolokCeiling">
