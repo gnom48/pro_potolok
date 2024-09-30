@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="../static/scripts/jquery-ui-1.13.3/jquery-ui.min.css">
 
     <title>PRO Потолок - Натяжные потолки в Севастополе от 300 руб за квадратный метр</title>
+
+    <meta name="yandex-verification" content="8c51f074bdefc7c8" />
+
     <meta name="description" content="Ищете идеальные натяжные потолки? PRO Потолок предлагает широкий выбор стилей и материалов для любого интерьера. Профессиональная установка за 1 день с гарантией качества. Бесплатный замер и ПОДАРОК для новых клиентов. Доставка и монтаж по Севастополю и Крыму!">
 
     <meta name="robots" content="index, follow">
