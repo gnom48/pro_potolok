@@ -8,11 +8,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/css-animation/1.1.1/css/animation.min.css">
     <link rel="stylesheet" href="../static/scripts/jquery-ui-1.13.3/jquery-ui.min.css">
      
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-
+    <link rel="apple-touch-icon" sizes="180x180" href="static/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="static/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="static/images/favicon-16x16.png">
+    <link rel="manifest" href="static/images/site.webmanifest">
     <title>PRO Потолок - Натяжные потолки в Севастополе от 300 руб за квадратный метр</title>
 
     <meta name="yandex-verification" content="8c51f074bdefc7c8" />
