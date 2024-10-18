@@ -141,7 +141,7 @@ def send_email_report():
 
     # Отправка email с отчетом
     sender_email = "dinardarsky@yandex.ru"
-    receiver_emails = ["dinardarskii@yandex.ru", "egorchima@gmail.com"]  # Список email получателей
+    receiver_emails = ["dinardarskii@yandex.ru", "pro-potolok92@yandex.ru"]  # Список email получателей
     password = "zvcgbanemxayvdpn"
 
     for receiver_email in receiver_emails:
