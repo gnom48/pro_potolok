@@ -1847,6 +1847,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
     <script>
 
+        window.addEventListener('beforeunload', function () {
+            navigator.sendBeacon('/goodbye', null);
+        });
+
         document.addEventListener("DOMContentLoaded", () => {
             const paragraphs = document.querySelectorAll('.ProPotolComand p');
 
